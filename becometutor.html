@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="author" content="colorlib.com">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sign Up Form</title>
+
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css">
+    <link rel="stylesheet" href="vendor/nouislider/nouislider.min.css">
+     
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="css/betutor.css">
+</head>
+
+<body>
+
+    <div class="main">
+
+        <div class="container">
+            <form method="POST" id="signup-form" class="signup-form" action="#">
+                <div>
+                    <h3>Personal info</h3>
+                    <fieldset>
+                        <h2>Personal information</h2>
+                        <p class="desc">Please enter your infomation and proceed to next step so we can build your account</p>
+                        <div class="fieldset-content">
+                            <div class="form-row" style="width: 50% !important;">
+                                <label class="form-label">Name</label>
+
+                                <div class="form-flex">
+                                    <div class="form-group" >
+                                        <input type="text" name="first_name" id="first_name" />
+                                        <span class="text-input">First</span>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" name="last_name" id="last_name" />
+                                        <span class="text-input">Last</span>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" name="email" id="email" />
+                                <span class="text-input">Example  :<span>  Jeff@gmail.com</span></span>
+                            </div>
+                             <div class="form-group">
+                                <label for="phone" class="form-label">Phone</label>
+                                <input type="text" name="phone" id="phone" />
+                            </div>
+                            <div class="form-group">
+                          <label for="sel1">I am:</label>
+                          <select class="form-control" style="width: 100px; height: 30px; border: 1px solid #cfc8c8;" id="sel1">
+                            <option value="gender">Gender</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                             
+                          </select>
+                        </div>      
+                            <div class="form-date">
+                                <label for="birth_date" class="form-label">Birth Date</label>
+                                <div class="form-date-group">
+                                    <div class="form-date-item">
+                                        <select id="birth_monthone" name="birth_month"></select>
+                                        <span class="text-input">MM</span>
+                                    </div>
+                                    <div class="form-date-item">
+                                        <select id="birth_dateone" name="birth_date"></select>
+                                        <span class="text-input">DD</span>
+                                    </div>
+                                    <div class="form-date-item">
+                                        <select id="birth_yearone" name="birth_year"></select>
+                                        <span class="text-input">YYYY</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="address" class="form-label">Address</label>
+                                <span class="text-input">Enter your current location. This should be the address where you will be attending lessons from. If you move to a new location, you must update it here. Please write it properly.</span>
+                                <input type="text" name="address" id="address" />
+                                 
+                                <label for="address" style="margin-bottom:0 !important;" class="form-label">State</label>
+                          <select class="form-control" style="width: 100px; height: 30px; border: 1px solid #cfc8c8;" id="sel1">
+                            <option disabled selected>--Select State--</option>
+                                    <option value="Abia">Abia</option>
+                                    <option value="Adamawa">Adamawa</option>
+                                    <option value="Akwa Ibom">Akwa Ibom</option>
+                                    <option value="Anambra">Anambra</option>
+                                    <option value="Bauchi">Bauchi</option>
+                                    <option value="Bayelsa">Bayelsa</option>
+                                    <option value="Benue">Benue</option>
+                                    <option value="Borno">Borno</option>
+                                    <option value="Cross Rive">Cross River</option>
+                                    <option value="Delta">Delta</option>
+                                    <option value="Ebonyi">Ebonyi</option>
+                                    <option value="Edo">Edo</option>
+                                    <option value="Ekiti">Ekiti</option>
+                                    <option value="Enugu">Enugu</option>
+                                    <option value="FCT">Federal Capital Territory</option>
+                                    <option value="Gombe">Gombe</option>
+                                    <option value="Imo">Imo</option>
+                                    <option value="Jigawa">Jigawa</option>
+                                    <option value="Kaduna">Kaduna</option>
+                                    <option value="Kano">Kano</option>
+                                    <option value="Katsina">Katsina</option>
+                                    <option value="Kebbi">Kebbi</option>
+                                    <option value="Kogi">Kogi</option>
+                                    <option value="Kwara">Kwara</option>
+                                    <option value="Lagos">Lagos</option>
+                                    <option value="Nasarawa">Nasarawa</option>
+                                    <option value="Niger">Niger</option>
+                                    <option value="Ogun">Ogun</option>
+                                    <option value="Ondo">Ondo</option>
+                                    <option value="Osun">Osun</option>
+                                    <option value="Oyo">Oyo</option>
+                                    <option value="Plateau">Plateau</option>
+                                    <option value="Rivers">Rivers</option>
+                                    <option value="Sokoto">Sokoto</option>
+                                    <option value="Taraba">Taraba</option>
+                                    <option value="Yobe">Yobe</option>
+                                    <option value="Zamfara">Zamfara</option>
+                                                             
+                                                          </select>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <h3>Educational Background</h3>
+                    <fieldset>
+                        <h2>Educational Background</h2>
+                        <p class="desc">Please enter your infomation and proceed to next step so we can build your account</p>
+                        <hr class="line" style="border: 1px solid grey;">
+                        <div class="row" style="display: flex;">
+                            
+                            <h1 class="minipage">A</h1> 
+
+                            <h1 class="minipage">B</h1>
+                            <h1 class="minipage">C</h1>
+                        </div>
+                        <div class="fieldset-content">
+                            
+                                
+                               <div class="form-group">
+                                <label for="email" class="form-label">School Name</label>
+                                <input type="email" name="email" id="email" />
+                                <span class="text-input">Example  :<span>  Jeff@gmail.com</span></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="email" class="form-label">Department</label>
+                                <input type="email" name="email" id="email" />
+                                <span class="text-input">Example  :<span>  Jeff@gmail.com</span></span>
+                            </div>
+                             
+                            <div class="form-date">
+                                 
+                                <div class="form-date-group">
+                                    <div class="form-date-item">
+                                        <span class="text-input">Start Month</span>
+                                        <select id="birth_month" name="birth_month"></select>
+                                        
+                                    </div>
+                                    <div class="form-date-item">
+                                        <span class="text-input">Start Year</span>
+                                        <select id="birth_yeartwo" name="birth_yeartwo"></select>
+                                        
+                                    </div>
+                                    </div>
+                                    <div class="form-check">
+                                    <input type="checkbox" style="border: 1px solid grey !important; width: 20px !important;" class="form-check-input" id="dropdownCheck">
+                             <label class="form-check-label" for="dropdownCheck">
+                                 I currently school here
+                                </label>
+                                 </div>
+                                  
+                                  <div class="form-date-group">
+                                       <div class="form-date-item">
+                                        <span class="text-input">End Month</span>
+                                        <select id="birth_monthtwo" name="birth_month"></select>
+                                        
+                                    </div>
+                                    <div class="form-date-item">
+                                        <span class="text-input">End Year</span>
+                                        <select id="birth_year" name="birth_year"></select>
+                                        
+                                    </div>
+                                    <div class="form-date-item">
+                                        <span class="text-input">Degree</span>
+                                        <select class="form-control" style="width: 200px !important;" name="birth_year">
+                                    <option disabled selected>Select one</option>
+                                    <option value="firstclass">First Class</option>
+                                    <option value="secondclassupper">Second Class Upper Division</option>
+                                    <option value="secondclasslower">Second Class Lower Division</option>
+                                    <option value="second">Third Class</option>
+                                        </select>
+                                        
+                                    </div>
+                                   
+                                  </div>
+                                   
+                            <a href="#fakeLink" class="btn sky">Add Another Qualification</a>
+                        </div>
+                    </fieldset>
+
+                    <h3>Set Financial Goals</h3>
+                    <fieldset>
+                        <h2>Set Financial Goals</h2>
+                        <p class="desc">Set up your money limit to reach the future plan</p>
+                        <div class="fieldset-content">
+                            <div class="donate-us">
+                                <div class="price_slider ui-slider ui-slider-horizontal">
+                                    <div id="slider-margin"></div>
+                                    <p class="your-money">
+                                        Your money you can spend per month :
+                                        <span class="money" id="value-lower"></span>
+                                        <span class="money" id="value-upper"></span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+    <!-- JS -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="vendor/jquery-validation/dist/additional-methods.min.js"></script>
+    <script src="vendor/jquery-steps/jquery.steps.min.js"></script>
+    <script src="vendor/minimalist-picker/dobpicker.js"></script>
+    <script src="vendor/nouislider/nouislider.min.js"></script>
+    <script src="vendor/wnumb/wNumb.js"></script>
+    <script src="js/betutor.js"></script>
+</body>
+
+</html>
