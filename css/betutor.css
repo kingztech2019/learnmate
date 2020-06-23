@@ -163,10 +163,10 @@ p.desc {
     font-weight: bold; }
 
 input {
-  width: 90%;
+  width: 100%;
   display: block;
   border: 2px solid #cfc8c8;
-  height: 30px;
+  height: 40px;
   box-sizing: border-box;
   padding: 0 20px;
   color: #222;
