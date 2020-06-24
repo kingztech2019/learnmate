@@ -18,6 +18,7 @@
     <link rel="stylesheet" type="text/css" href="css/animate.css" />
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
     <link rel="stylesheet" type="text/css" href="css/bootstrap-select.css" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-multiselect.css" />
     <link rel="stylesheet" type="text/css" href="css/font-awesome.css" />
     <link rel="stylesheet" type="text/css" href="css/jquery.fancybox.css" />
     <link rel="stylesheet" type="text/css" href="css/mob_menu.css" />
@@ -26,9 +27,37 @@
     <link rel="stylesheet" type="text/css" href="css/teacher.css" />
     <link rel="stylesheet" type="text/css" href="css/datepicker.css" />
     <link href='https://fonts.googleapis.com/css?family=Raleway:800,500%7CLato:400,300,400italic,700,700italic,300italic,900italic,900,100,100italic%7CRoboto:400,500,600' rel='stylesheet' type='text/css' />
+    <script src="https://www.gstatic.com/firebasejs/7.15.4/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.15.4/firebase-auth.js"></script>
 </head>
 
 <body id="home" class="cms_course">
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.15.4/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyD46OgRR-nfPhufuq4p5dhV8H1vZWyiovk",
+    authDomain: "eduplus-835d9.firebaseapp.com",
+    databaseURL: "https://eduplus-835d9.firebaseio.com",
+    projectId: "eduplus-835d9",
+    storageBucket: "eduplus-835d9.appspot.com",
+    messagingSenderId: "421199883240",
+    appId: "1:421199883240:web:b0d2fa07f654029054525d",
+    measurementId: "G-2NZRQNM6JB"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+  const auth = firebase.auth();
+
+</script>
+<div id="loading">
+	
+</div>
     <header>
         <nav>
             <div class="container">
@@ -119,13 +148,18 @@
                             </div>
                         </div>
                     </div>
+                    <div class="text-center " id="verifyemail">
+						<h3>Please kindly verify your Email Address.<br><a href="" style="font-size: 11px;"> <b>resend email verification</b></a></h3>
+
+						 
+					</div>
                     <div class="wrapper_course">
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                             <div class="container-fluid" style=" margin-top: 50px; width: 1200px; ">
                                 <div class="row justify-content-center" style=" justify-content: center !important;">
                                     <div class="col-11 col-sm-9 col-md-7 col-lg-6 col-xl-5 text-center p-0 mt-3 mb-2">
                                         <div class="card px-0 pt-4 pb-0 mt-3 mb-3">
-                                            <h2 id="heading">Sign Up Your User Account</h2>
+                                            <h2 id="heading">Kindly Complete Your Profile</h2>
                                             <p>Fill all form field to go to next step</p>
                                             <form id="msform">
                                                 <!-- progressbar -->
@@ -158,7 +192,7 @@
                                                         </div>
                                                         <div class="form-group">
                                                             <label for="exampleFormControlInput1">Email address</label>
-                                                            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                                                            <input type="email" class="form-control" id="displayemail" placeholder="name@example.com">
                                                         </div>
                                                         <div class="form-group">
                                                             <label for="exampleFormControlSelect1">Gender</label>
@@ -415,9 +449,36 @@
                                                             Snap and upload a valid ID card to complete identity verification. Your ID will be completely deleted immediately after confirmation.
                                                             EXAMPLE: this can be your National ID, Int'l Passport, Voter's Card, Driver's License, Work ID, School ID Card or any other valid means of identification. Verifying your ID helps build trust within the Tuteria community. We'll match information from your online account to those on your ID card.
                                                             This step is compulsory for all tutors. Your ID is 100% secure and you'll only do this once. You may also send your ID to help@tuteria.com.</p>
-                                                        <label class="fieldlabels">Upload Signature Photo:</label> <input type="file" name="pic" accept="image/*">
-                                                        <button type="submit" id="hideBtn" class="btn btn_subscribe"><i class="fa fa-plus" style="padding: 6px;"></i>Verify Your Offline ID </button>
-                                                    </div> <input type="button" name="next" class="next action-button" value="Submit" /> <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
+                                                        <label class="fieldlabels">Upload:</label> <input type="file" name="pic" accept="image/*">
+                                                        <button type="submit" id="hideBtn" class="btn btn_subscribe"><i class="fa fa-plus" style="padding: 6px;"></i>Verify Your Online ID </button>
+                                                        <p>To find your Facebook username, just follow these steps:</p>
+
+<li>Go to facebook.com and login.</li>
+<li>On your facebook homepage, click on your name at the top-right of your window -in the top blue banner.</li>
+<li>The address will then be in the address bar of your browser.</li>
+<li>Copy everything after facebook.com/ e.g if you see facebook.com/ajose, you're to copy ajose and paste below</li>
+                                                        <div class="form-group">
+                                                                <label for="inputCity">Facebook Username</label>
+                                                                <input type="text" class="form-control" id="inputCity">
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label for="inputCity">Twitter Handle</label>
+                                                                <input type="text" class="form-control" id="inputCity">
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label for="inputCity">Linkedin Username</label>
+                                                                <input type="text" class="form-control" id="inputCity">
+                                                            </div>
+<p> Select only the subjects and class you typically teach.
+Note that you MUST pass expert-level tests & assessments for each subject before you can receive students <a href=""><b>Click here </b></a> to check Subjects/Courses you can teach </p>
+<div class="form-group">
+  <label for="inputCity">Subjects of interest/class level</label>
+   <input type="text" class="form-control" id="inputCity">
+                                                            </div>
+
+ 
+                                                                                 
+</div> <input type="button" name="next" class="next action-button" value="Submit" /> <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
                                                 </fieldset>
                                                 <fieldset>
                                                     <div class="form-card">
@@ -685,7 +746,9 @@
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/bootstrap-datepicker.js"></script>
     <script type="text/javascript" src="js/bootstrap-select.js"></script>
+    <script type="text/javascript" src="js/bootstrap-multiselect.js"></script>
     <script type="text/javascript" src="js/jquery-plugin-collection.js"></script>
+    <script type="text/javascript" src="js/profiledata.js"></script>
     <script type="text/javascript" src="js/owl-carousel.js"></script>
     <script type="text/javascript" src="js/js-functions.js"></script>
     <script type="text/javascript" src="js/teacher.js"></script>

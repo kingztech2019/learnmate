@@ -81,6 +81,7 @@ var date_input=$('input[name="date"]'); //our date input has the name "date"
         autoclose: true,
       };
       date_input.datepicker(options);
+      $('#demo').multiselect();
 
 });
 
