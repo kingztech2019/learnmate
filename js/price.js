@@ -164,7 +164,7 @@ function payWithPaystack() {
 		email: document.getElementById("email-address").value,
 		amount: parseInt(document.getElementById("dprice").value) * 100,
 		firstname: document.getElementById("client-name").value,
-		lastname: document.getElementById("client-lname").value,
+		lastname: document.getElementById("client_lname").value,
 		ref: "" + Math.floor(Math.random() * 1000000000 + 1), // generates a pseudo-unique reference. Please replace with a reference you generated. Or remove the line entirely so our API will generate one for you
 		// label: "Optional string that replaces customer email"
 		onClose: function() {

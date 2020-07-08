@@ -1,6 +1,6 @@
 const ClientTitle = document.querySelector("#clienttitle")
 const ClientName = document.querySelector("#client-name")
-const ClientLname = document.querySelector("#client-lname")
+const ClientLname = document.querySelector("#client_lname")
 const ClientType = document.querySelector("#classType")
 const ClientState = document.querySelector(".clientstate")
 const ClientLga = document.querySelector(".select-lga")
@@ -14,7 +14,7 @@ const clientCourse = document.querySelector(".clientcat")
 const clientClass = document.querySelector("#clientclass")
 const clientHour = document.querySelector(".clienthour")
 const clientDuration = document.querySelector(".clientduration")
-const clientClass = document.querySelector("#clientclass")
+ 
 //
 const Monday = document.querySelector("#monday")
 const Tuesday = document.querySelector("#tuesday")
