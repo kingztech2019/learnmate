@@ -1,7 +1,7 @@
 //sign in
 const loginForm = document.querySelector("#loginForm");
 const loader = document.querySelector("#loading");
-
+const makeAdmin = document.querySelector("#makeadmin")
 loginForm.addEventListener("submit", function(e) {
 	e.preventDefault();
 	const email = loginForm["login-email"].value;
@@ -20,3 +20,4 @@ loginForm.addEventListener("submit", function(e) {
 	 
 	console.log(email, password);
 });
+

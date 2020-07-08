@@ -29,6 +29,9 @@
     <link href='https://fonts.googleapis.com/css?family=Raleway:800,500%7CLato:400,300,400italic,700,700italic,300italic,900italic,900,100,100italic%7CRoboto:400,500,600' rel='stylesheet' type='text/css' />
     <script src="https://www.gstatic.com/firebasejs/7.15.4/firebase-app.js"></script>
 	<script src="https://www.gstatic.com/firebasejs/7.15.4/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.15.4/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.15.4/firebase-functions.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.15.4/firebase-storage.js"></script>
 </head>
 
 <body id="home" class="cms_course">
@@ -53,7 +56,10 @@
   firebase.initializeApp(firebaseConfig);
   firebase.analytics();
   const auth = firebase.auth();
-
+  const functions = firebase.functions();
+  const database = firebase.database();
+  const rootRef = database.ref('users');
+  autoId = rootRef.push().key
 </script>
 <div id="loading">
 	
@@ -153,6 +159,14 @@
 
 						 
 					</div>
+                    <div class="wrap-input100 validate-input" data-validate = "Enter username">
+                        <input class="input100" type="text" id="login-email" name="username" placeholder="Username">
+                        <span class="focus-input100" data-placeholder="&#xf207;"></span>
+                    </div>
+                    <button class="login100-form-btn" id="makeadmin">
+                            Admin
+                        </button>
+                        
                     <div class="wrapper_course">
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                             <div class="container-fluid" style=" margin-top: 50px; width: 1200px; ">
@@ -184,19 +198,19 @@
                                                         </div>
                                                         <div class="form-group">
                                                             <label for="exampleFormControlInput1">Full Name</label>
-                                                            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Full Name">
+                                                            <input type="text" class="form-control" id="user_name" placeholder="Full Name">
                                                         </div>
                                                         <div class="form-group">
                                                             <label for="exampleFormControlInput1">Phone Number</label>
-                                                            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Phone Number">
+                                                            <input type="email" class="form-control" id="user_phone" placeholder="Phone Number">
                                                         </div>
                                                         <div class="form-group">
                                                             <label for="exampleFormControlInput1">Email address</label>
-                                                            <input type="email" class="form-control" id="displayemail" placeholder="name@example.com">
+                                                            <input type="email" class="form-control" id="user_email" placeholder="name@example.com">
                                                         </div>
                                                         <div class="form-group">
                                                             <label for="exampleFormControlSelect1">Gender</label>
-                                                            <select class="form-control" id="exampleFormControlSelect1">
+                                                            <select class="form-control" id="user_gender">
                                                                 <option value="gender">Gender</option>
                                                                 <option value="male">Male</option>
                                                                 <option value="female">Female</option>
@@ -209,11 +223,11 @@
                                                         </div>
                                                         <div class="form-group">
                                                             <label for="exampleFormControlInput1">Address</label>
-                                                            <input type="text" name="address" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                                                            <input type="text" name="address" class="form-control" id="user_address" placeholder="name@example.com">
                                                         </div>
                                                         <div class="form-group">
                                                             <label for="exampleFormControlSelect1">State</label>
-                                                            <select class="form-control" id="exampleFormControlSelect1">
+                                                            <select class="form-control" id="user_state">
                                                                 <option disabled selected>--Select State--</option>
                                                                 <option value="Abia">Abia</option>
                                                                 <option value="Adamawa">Adamawa</option>
@@ -254,7 +268,8 @@
                                                                 <option value="Zamfara">Zamfara</option>
                                                             </select>
                                                         </div>
-                                                    </div> <input type="button" name="next" class="next action-button" value="Next" />
+                                                    </div> <input type="button" name="next" class="next action-button" id="saveuser" value="Next" />
+
                                                 </fieldset>
                                                 <fieldset>
                                                     <div class="form-card">
@@ -269,16 +284,16 @@
                                                         </div>
                                                         <div class="form-group">
                                                             <label for="exampleFormControlInput1">Name of School or Institute</label>
-                                                            <input type="text" name="address" class="form-control" id="exampleFormControlInput1" placeholder="Name of School or Institute">
+                                                            <input type="text" name="address" class="form-control" id="user_school" placeholder="Name of School or Institute">
                                                         </div>
                                                         <div class="form-row">
                                                             <div class="form-group col-md-6">
                                                                 <label for="inputCity">Course of Study</label>
-                                                                <input type="text" class="form-control" id="inputCity">
+                                                                <input type="text" class="form-control" id="user_course">
                                                             </div>
                                                             <div class="form-group col-md-6">
                                                                 <label for="inputState">Degree</label>
-                                                                <select id="inputState" class="form-control">
+                                                                <select id="user_grade" class="form-control">
                                                                     <option value="" selected>Select</option>
                                                                     <option value="B.Sc.">B.Sc.</option>
                                                                     <option value="B.A.">B.A.</option>
@@ -305,16 +320,16 @@
                                                     <div class="form-card" id="newForm">
                                                         <div class="form-group">
                                                             <label for="exampleFormControlInput1">Name of School or Institute</label>
-                                                            <input type="text" name="address" class="form-control" id="exampleFormControlInput1" placeholder="Name of School or Institute">
+                                                            <input type="text" name="address" class="form-control" id="user_schooltwo" placeholder="Name of School or Institute">
                                                         </div>
                                                         <div class="form-row">
                                                             <div class="form-group col-md-6">
                                                                 <label for="inputCity">Course of Study</label>
-                                                                <input type="text" class="form-control" id="inputCity">
+                                                                <input type="text" class="form-control"  id="user_coursetwo">
                                                             </div>
                                                             <div class="form-group col-md-6">
                                                                 <label for="inputState">Degree</label>
-                                                                <select id="inputState" class="form-control">
+                                                                <select id="user_gradetwo" class="form-control">
                                                                     <option value="" selected>Select</option>
                                                                     <option value="B.Sc.">B.Sc.</option>
                                                                     <option value="B.A.">B.A.</option>
@@ -346,14 +361,20 @@
                                                         <div class="form-row">
                                                             <div class="col-md-6">
                                                                 <label for="exampleFormControlInput1">Name of Company </label>
-                                                                <input type="text" class="form-control" placeholder="First name">
+                                                                <input type="text" class="form-control" 
+                                                                id="user_company" 
+
+                                                                placeholder="First name">
                                                             </div>
                                                             <div class="col-md-6">
                                                                 <label for="exampleFormControlInput1">Your Role</label>
-                                                                <input type="text" class="form-control" placeholder="Last name">
+                                                                <input type="text" class="form-control" 
+                                                                id="user_role" 
+
+                                                                placeholder="Last name">
                                                             </div>
                                                         </div>
-                                                        <div id="check"><input type="checkbox" style="float: left !important; margin:5px 5px !important;" class="checkbox" id="autologin"> <label style="margin-left:9px!important;" for="autologin">I currently work here</label></div>
+                                                        <div id="check"><input type="checkbox" style="float: left !important; margin:5px 5px !important;" class="checkbox" id="user_current"> <label style="margin-left:9px!important;" for="autologin">I currently work here</label></div>
                                                         <div class="clear"></div>
                                                         <a href="blog_right_sidebar.html" id="hideBtn" class="btn_glob">Add Another</a>
                                                     </div>
@@ -364,7 +385,7 @@
                                                         <h4>Teacher Experience</h4>
                                                         <div class="form-group">
                                                             <label for="exampleFormControlSelect1">How long have you been teaching?</label>
-                                                            <select class="form-control" id="exampleFormControlSelect1">
+                                                            <select class="form-control" id="user_teaching">
                                                                 <option value="" selected>Just starting out</option>
                                                                 <option value="2">Less than 2 years</option>
                                                                 <option value="5">Between 3 to 5 years</option>
@@ -374,7 +395,7 @@
                                                         </div>
                                                         <div class="form-group">
                                                             <label for="exampleFormControlSelect1">What class of students do you teach?</label>
-                                                            <select class="form-control" id="exampleFormControlSelect1">
+                                                            <select class="form-control" id="user_class">
                                                                 <option value="" selected>Choose</option>
                                                                 <option value="Nursery">Nursery</option>
                                                                 <option value="Primary">Primary</option>
@@ -387,7 +408,7 @@
                                                         <p style="background-color:#E6E6FA; ">Academic Curriculum Academic Curriculum If you teach academic subjects for nursery, primary or secondary, then select the curriculum you can teach with. Skip this if you teach non-academic subjects or skills.</p>
                                                         <div class="form-group">
                                                             <label for="exampleFormControlSelect1">Select Curriculum</label>
-                                                            <select class="form-control" id="exampleFormControlSelect1">
+                                                            <select class="form-control" id="user_curriculum">
                                                                 <option value="" selected>Choose Curriculum</option>
                                                                 <option value="Nursery">Nigerian</option>
                                                                 <option value="Primary">British</option>
@@ -396,8 +417,8 @@
                                                         </div>
                                                         <div class="form-group">
                                                             <label for="exampleFormControlSelect1">Where should lessons hold?</label>
-                                                            <select class="form-control" id="exampleFormControlSelect1">
-                                                                <option value="user" selected>Client&#39;s Location</option>
+                                                            <select class="form-control" id="user_lesson">
+                                                                <option value="client" selected>Client&#39;s Location</option>
                                                                 <option value="tutor">Tutor&#39;s Location</option>
                                                                 <option value="neutral">Anywhere convenient</option>
                                                             </select>
@@ -415,11 +436,11 @@
                                                             <h5>NOTE: Do not copy</h5>
                                                         </div>
                                                         <div class="form-group">
-                                                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                                            <textarea class="form-control" id="user_about" rows="3"></textarea>
                                                         </div>
                                                         <div class="clear"></div>
                                                     </div>
-                                                    <input type="button" name="next" class="next action-button" value="Next" /> <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
+                                                    <input type="button" name="next" id="save_edu" class="next action-button" value="Next" /> <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
                                                 </fieldset>
                                                 <fieldset>
                                                     <div class="form-card" style="margin-top:-30px;">
@@ -440,7 +461,9 @@
                                                             <li>Photo must be bright and clear, NOT blurred or dark</li>
                                                             <li>Photo background MUST look neat and presentable</li>
                                                             <li>Photo should not be more than 2MB in size</li>
-                                                            <label class="fieldlabels">Upload Your Photo:</label> <input type="file" name="pic" accept="image/*">
+                                                            <label class="fieldlabels">Upload Your Photo:</label> <input type="file" name="pic"
+                                                            id="changeimage" 
+                                                             accept="image/*">
                                                         </div>
                                                         <button type="submit" id="hideBtn" class="btn btn_subscribe"><i class="fa fa-plus" style="padding: 6px;"></i>Verify Your Offline ID </button>
                                                         <!--our content goes here-->
@@ -449,7 +472,7 @@
                                                             Snap and upload a valid ID card to complete identity verification. Your ID will be completely deleted immediately after confirmation.
                                                             EXAMPLE: this can be your National ID, Int'l Passport, Voter's Card, Driver's License, Work ID, School ID Card or any other valid means of identification. Verifying your ID helps build trust within the Tuteria community. We'll match information from your online account to those on your ID card.
                                                             This step is compulsory for all tutors. Your ID is 100% secure and you'll only do this once. You may also send your ID to help@tuteria.com.</p>
-                                                        <label class="fieldlabels">Upload:</label> <input type="file" name="pic" accept="image/*">
+                                                        <label class="fieldlabels">Upload:</label> <input type="file" id="changeimages" name="pic" accept="image/*">
                                                         <button type="submit" id="hideBtn" class="btn btn_subscribe"><i class="fa fa-plus" style="padding: 6px;"></i>Verify Your Online ID </button>
                                                         <p>To find your Facebook username, just follow these steps:</p>
 
@@ -459,26 +482,27 @@
 <li>Copy everything after facebook.com/ e.g if you see facebook.com/ajose, you're to copy ajose and paste below</li>
                                                         <div class="form-group">
                                                                 <label for="inputCity">Facebook Username</label>
-                                                                <input type="text" class="form-control" id="inputCity">
+                                                                <input type="text" class="form-control" id="fb_id">
                                                             </div>
                                                             <div class="form-group">
                                                                 <label for="inputCity">Twitter Handle</label>
-                                                                <input type="text" class="form-control" id="inputCity">
+                                                                <input type="text" class="form-control" id="tw_id">
                                                             </div>
                                                             <div class="form-group">
                                                                 <label for="inputCity">Linkedin Username</label>
-                                                                <input type="text" class="form-control" id="inputCity">
+                                                                <input type="text" class="form-control" id="lk_id">
                                                             </div>
 <p> Select only the subjects and class you typically teach.
 Note that you MUST pass expert-level tests & assessments for each subject before you can receive students <a href=""><b>Click here </b></a> to check Subjects/Courses you can teach </p>
 <div class="form-group">
   <label for="inputCity">Subjects of interest/class level</label>
-   <input type="text" class="form-control" id="inputCity">
+   <input type="text" class="form-control" id="user_skill">
                                                             </div>
 
  
                                                                                  
-</div> <input type="button" name="next" class="next action-button" value="Submit" /> <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
+</div> <input type="button" onclick="submitBtn()" name="next" id="submitbtn" class="next action-button" value="Submit" />
+ <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
                                                 </fieldset>
                                                 <fieldset>
                                                     <div class="form-card">
@@ -639,6 +663,7 @@ Note that you MUST pass expert-level tests & assessments for each subject before
             </div>
         </div>
     </div>
+
     <footer class="footer">
         <div class="container">
             <div class="row">
@@ -748,6 +773,7 @@ Note that you MUST pass expert-level tests & assessments for each subject before
     <script type="text/javascript" src="js/bootstrap-select.js"></script>
     <script type="text/javascript" src="js/bootstrap-multiselect.js"></script>
     <script type="text/javascript" src="js/jquery-plugin-collection.js"></script>
+    <script type="text/javascript" src="js/education.js"></script>
     <script type="text/javascript" src="js/profiledata.js"></script>
     <script type="text/javascript" src="js/owl-carousel.js"></script>
     <script type="text/javascript" src="js/js-functions.js"></script>

@@ -83,6 +83,8 @@ var date_input=$('input[name="date"]'); //our date input has the name "date"
       date_input.datepicker(options);
       $('#demo').multiselect();
 
+      
+
 });
 
 const FormHide = document.querySelector("#newForm")
