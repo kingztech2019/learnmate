@@ -36,4 +36,24 @@ signupForm.addEventListener("submit", function(e) {
 	}
 	console.log(email, password);
 });
+firebase.auth().onAuthStateChanged(function(user){
+	if (!user) {
+		window.location="index.html"
+
+		
+// 		user.getIdTokenResult().then(idTokenResult =>{
+// 			if(idTokenResult.claims.admin){
+// 				console.log("true")
+// 				const key =  firebase.database().ref().child("users")
+// key.on("child_added", snap=>{
+// 	var name = snap.child("personal/"+"userName").val()
+// 	console.log(name)
+// 	console.log(snap.val());
+// })
+				 
+// 			}
+// 		})
+	}
+
+});
 

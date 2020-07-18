@@ -10,7 +10,7 @@ loginForm.addEventListener("submit", function(e) {
 		auth.signInWithEmailAndPassword(email, password)
 			.then((cred) => {
 				loader.style.display="none";
-				window.location = "becometutor.html";
+				window.location = "profile.html";
 				console.log(cred);
 			})
 			.catch((err)=>{
@@ -18,6 +18,6 @@ loginForm.addEventListener("submit", function(e) {
 				console.log(err);
 			});
 	 
-	console.log(email, password);
+	 
 });
 

@@ -72,20 +72,33 @@ $(".progress-bar")
 $(".submit").click(function(){
 return false;
 })
-var date_input=$('input[name="date"]'); //our date input has the name "date"
-      var container=$('.form-group').length>0 ? $('.form-group').parent() : "body";
-      var options={
-        format: 'mm/dd/yyyy',
-        container: container,
-        todayHighlight: true,
-        autoclose: true,
-      };
-      date_input.datepicker(options);
-      $('#demo').multiselect();
+// var date_input=$('input[name="date"]'); //our date input has the name "date"
+//       var container=$('.form-group').length>0 ? $('.form-group').parent() : "body";
+//       var options={
+//         format: 'mm/dd/yyyy',
+//         container: container,
+//         todayHighlight: true,
+//         autoclose: true,
+//       };
+//       date_input.datepicker(options);
+//       $('#demo').multiselect();
+
+       
+  $('#mydate').datepicker({
+    todayHighlight: true,
+     orientation: "bottom left",
+     format: "mm/dd/yy",
+    container: ".bdc"
+    //container: console.log($(this).datepicker())
+  });
+  
+
+ 
 
       
 
 });
+
 
 const FormHide = document.querySelector("#newForm")
 const BtnHide = document.querySelector("#hideBtn")

@@ -30,9 +30,34 @@
     <link rel="stylesheet" type="text/css" href="css/reset.css" />
     <link rel="stylesheet" type="text/css" href="css/style.css" />
     <link href='https://fonts.googleapis.com/css?family=Raleway:800,500%7CLato:400,300,400italic,700,700italic,300italic,900italic,900,100,100italic%7CRoboto:400,500,600' rel='stylesheet' type='text/css' />
+    <script src="https://www.gstatic.com/firebasejs/7.15.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.4/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.15.4/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.15.4/firebase-functions.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.15.4/firebase-storage.js"></script>
 </head>
 
 <body id="home" class="cms_index2">
+    <script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyD46OgRR-nfPhufuq4p5dhV8H1vZWyiovk",
+    authDomain: "eduplus-835d9.firebaseapp.com",
+    databaseURL: "https://eduplus-835d9.firebaseio.com",
+    projectId: "eduplus-835d9",
+    storageBucket: "eduplus-835d9.appspot.com",
+    messagingSenderId: "421199883240",
+    appId: "1:421199883240:web:b0d2fa07f654029054525d",
+    measurementId: "G-2NZRQNM6JB"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+   
+  const auth = firebase.auth();
+  const database = firebase.database();
+  const rootRef = database.ref('users');
+  autoId = rootRef.push().key
+</script>
     <header>
         <div class="header_top">
             <div class="container">
@@ -823,6 +848,9 @@
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/bootstrap-select.js"></script>
     <script type="text/javascript" src="js/jquery-plugin-collection.js"></script>
+
+    <script type="text/javascript" src="js/auth.js"></script>
+     
     <script type="text/javascript" src="js/owl-carousel.js"></script>
     <script type="text/javascript" src="js/rev/jquery.themepunch.tools.min.js"></script>
     <script type="text/javascript" src="js/rev/jquery.themepunch.revolution.min.js"></script>
