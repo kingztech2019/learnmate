@@ -25,9 +25,13 @@ function Price() {
 		if (User_Class == "offline") {
 			console.log(DisplayResult);
 			document.getElementById("priceme").value=`${DisplayResult}`
+			console.log(`1000 * ${User_Time} * ${User_Month}`)
+			document.getElementById("totallesson").innerHTML=`&#8358;1000 &times; ${User_Time} hrs &times; ${User_Month} lesson(s); &times  ${count} day(s)`
 			 
 		} else {
 			console.log(DisplayResult / 2);
+			document.getElementById("totallesson").innerHTML=`&#8358;1000 &times; ${User_Time} hrs &times; ${User_Month} lesson(s); &times  ${count} day(s)`
+
 			document.getElementById("priceme").value=`${DisplayResult/2}`
 			 
 		}
@@ -38,9 +42,13 @@ function Price() {
 		const DisplayResult = DResult * User_Month;
 		if (User_Class == "offline") {
 			console.log(DisplayResult);
+			document.getElementById("totallesson").innerHTML=`&#8358;2000 &times; ${User_Time} hrs &times; ${User_Month} lesson(s); &times  ${count} day(s)`
+
 			document.getElementById("priceme").value=`${DisplayResult}`
 			 
 		} else {
+			document.getElementById("totallesson").innerHTML=`&#8358;2000 &times; ${User_Time} hrs &times; ${User_Month} lesson(s); &times  ${count} day(s)`
+
 			document.getElementById("priceme").value=`${DisplayResult/2}`
 			 
 	}
@@ -50,8 +58,10 @@ function Price() {
 		const DisplayResult = DResult * User_Month;
 		if (User_Class == "offline") {
 			document.getElementById("priceme").value=`${DisplayResult}`
+			document.getElementById("totallesson").innerHTML=`&#8358;3000 &times; ${User_Time} hrs &times; ${User_Month} lesson(s); &times  ${count} day(s)`
 			 
 		} else {
+			document.getElementById("totallesson").innerHTML=`&#8358;3000 &times; ${User_Time} hrs &times; ${User_Month} lesson(s); &times  ${count} day(s)`
 			document.getElementById("priceme").value=`${DisplayResult/2}`
 		}
 	}
@@ -61,9 +71,11 @@ function Price() {
 		const DResult = result * count;
 		const DisplayResult = DResult * User_Month;
 		if (User_Class == "offline") {
+			document.getElementById("totallesson").innerHTML=`&#8358;3000 &times; ${User_Time} hrs &times; ${User_Month} lesson(s); &times  ${count} day(s)`
 			document.getElementById("priceme").value=`${DisplayResult}`
 		} else {
 			document.getElementById("priceme").value=`${DisplayResult/2}`
+			document.getElementById("totallesson").innerHTML=`&#8358;3000 &times; ${User_Time} hrs &times; ${User_Month} lesson(s); &times  ${count} day(s)`
 		}
 	}
 
@@ -73,8 +85,10 @@ function Price() {
 		const DisplayResult = DResult * User_Month;
 		if (User_Class == "offline") {
 			document.getElementById("priceme").value=`${DisplayResult}`
+			document.getElementById("totallesson").innerHTML=`&#8358;3000 &times; ${User_Time} hrs &times; ${User_Month} lesson(s); &times  ${count} day(s)`
 		} else {
 			document.getElementById("priceme").value=`${DisplayResult/2}`
+			document.getElementById("totallesson").innerHTML=`&#8358;3000 &times; ${User_Time} hrs &times; ${User_Month} lesson(s); &times  ${count} day(s)`
 		}
 	}
 	if (User_Group == "Exams") {
@@ -83,8 +97,10 @@ function Price() {
 		const DisplayResult = DResult * User_Month;
 		if (User_Class == "offline") {
 			document.getElementById("priceme").value=`${DisplayResult}`
+			document.getElementById("totallesson").innerHTML=`&#8358;3000 &times; ${User_Time} hrs &times; ${User_Month} lesson(s); &times  ${count} day(s)`
 		} else {
 			document.getElementById("priceme").value=`${DisplayResult/2}`
+			document.getElementById("totallesson").innerHTML=`&#8358;3000 &times; ${User_Time} hrs &times; ${User_Month} lesson(s); &times  ${count} day(s)`
 		}
 	}
 
@@ -110,8 +126,12 @@ function payWithPaystack() {
 		callback: function(response) {
 			let message = "Payment complete! Reference: " + response.reference;
 			alert(message);
-			window.location.href = `success.html =+${response.reference}`;
+			window.location.href = `success.html`;
 		},
 	});
 	handler.openIframe();
 }
+const testBtn = document.querySelector("#testbtn")
+testBtn.addEventListener("click", ()=>{
+	alert("Payment complete! Reference: " + response.reference);
+})
