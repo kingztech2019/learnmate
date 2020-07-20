@@ -92,4 +92,34 @@ body{
   .container{
     width: 100%;
   }
+   #form-client{
+    width: 100%;
+  }
+}
+
+@media (max-width: 320px) {
+  .stepwizard {
+    width: 100%;
+  }
+  .container{
+    width: 100%;
+  }
+  #form-client{
+    width: 100%;
+  }
+}
+
+@media (max-width: 640px) {
+  .stepwizard {
+    width: 100%;
+  }
+  .container{
+    width: 100%;
+  }
+   #form-client{
+    width: 100%;
+  }
+  p{
+    font-size:3px;
+  }
 }
