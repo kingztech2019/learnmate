@@ -121,7 +121,7 @@ body{
     padding: 10px;
   }
   input{
-    width: 20px;
+    width: 100%;
   }
   
 }
