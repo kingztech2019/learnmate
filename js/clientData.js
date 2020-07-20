@@ -30,6 +30,7 @@ const nextBtn = document.querySelector("#nextbtn")
 const userId = Math.floor((Math.random() * 100000) + 1)
 
 nextbtn.addEventListener("click", ()=>{
+	var status=navigator.onLine;
 	 if (status) {
       
     }else{
