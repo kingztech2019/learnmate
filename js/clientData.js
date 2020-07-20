@@ -29,6 +29,22 @@ const clientForm = document.querySelector('#clientform')
 const nextBtn = document.querySelector("#nextbtn")
 const userId = Math.floor((Math.random() * 100000) + 1)
 
+nextbtn.addEventListener("click", ()=>{
+	 if (status) {
+      
+    }else{
+       
+        
+      document.getElementById("loading").style.display="none";
+        Swal.fire({
+  type: 'error',
+  title: 'Oops...',
+  text: 'No Internet Connection!'
+  
+})
+    }
+
+})
 clientForm.addEventListener("input", ()=>{
 	if(clientName.value.length>0 
  		&&clientLname.value.length>0
@@ -94,6 +110,21 @@ clientForm.addEventListener("input", ()=>{
 
 //final button function
 clientBtn.addEventListener("click", function(){
+	document.getElementById("loading").style.display="block"
+	 var status=navigator.onLine;
+    if (status) {
+      console.log("online");
+    }else{
+       
+        
+      document.getElementById("loading").style.display="none";
+        Swal.fire({
+  type: 'error',
+  title: 'Oops...',
+  text: 'No Internet Connection!'
+  
+})
+    }
 	 
 	var Checks=document.getElementsByClassName("form-check-input")
 	var str = "";
@@ -127,6 +158,9 @@ clientBtn.addEventListener("click", function(){
 	     	clientDuration:clientDuration.value,
 	     	days:str
 
+	     }).then(()=>{
+				document.getElementById("loading").style.display="none";
+
 	     })
-	console.log("click me");
+	 
 })

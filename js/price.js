@@ -1,3 +1,6 @@
+function test(){
+ document.getElementById("loading").style.display="block"
+}
 function Price() {
 	const User_Group = document.querySelector("#group").value;
 	const User_Total = document.querySelector("#total");
@@ -52,13 +55,16 @@ function Price() {
 			document.getElementById("priceme").value=`${DisplayResult/2}`
 			 
 	}
+}
 	if (User_Group == "Secondary") {
 		const result = 3000 * User_Time;
 		const DResult = result * count;
 		const DisplayResult = DResult * User_Month;
 		if (User_Class == "offline") {
-			document.getElementById("priceme").value=`${DisplayResult}`
+			console.log(DisplayResult);
 			document.getElementById("totallesson").innerHTML=`&#8358;3000 &times; ${User_Time} hrs &times; ${User_Month} lesson(s); &times  ${count} day(s)`
+			document.getElementById("priceme").value=`${DisplayResult}`
+			
 			 
 		} else {
 			document.getElementById("totallesson").innerHTML=`&#8358;3000 &times; ${User_Time} hrs &times; ${User_Month} lesson(s); &times  ${count} day(s)`
@@ -106,16 +112,18 @@ function Price() {
 
 	console.log("click");
 }
-}
+
 
 //const paymentForm = document.getElementById("paymentForm");
 //paymentForm.addEventListener("submit", payWithPaystack, false);
 function payWithPaystack() {
+	var Row = document.getElementById("somerow");
+    var Cells = Row.getElementsByTagName("td");
 	event.preventDefault();
 	let handler = PaystackPop.setup({
 		key: "pk_test_2142622923277f8881f439c84df532559b0270d6", // Replace with your public key
 		email: document.getElementById("email-address").value,
-		amount: parseInt(document.getElementById("priceme").value) * 100,
+		amount: parseInt(Cells[0].innerText) * 100,
 		firstname: document.getElementById("client-name").value,
 		lastname: document.getElementById("client_lname").value,
 		ref: "" + Math.floor(Math.random() * 1000000000 + 1), // generates a pseudo-unique reference. Please replace with a reference you generated. Or remove the line entirely so our API will generate one for you
@@ -126,12 +134,17 @@ function payWithPaystack() {
 		callback: function(response) {
 			let message = "Payment complete! Reference: " + response.reference;
 			alert(message);
+			rootRef.child(autoId +"/"+"payment").set({
+	     	 reference:response.reference
+	     }).then(()=>{
+	     	//document.querySelector("#loading").style.display="none";
+	     }).catch((err)=>{
+	     	console.log(err)
+
+	     })
 			window.location.href = `success.html`;
 		},
 	});
 	handler.openIframe();
 }
-const testBtn = document.querySelector("#testbtn")
-testBtn.addEventListener("click", ()=>{
-	alert("Payment complete! Reference: " + response.reference);
-})
+ 

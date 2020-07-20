@@ -5,8 +5,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="" />
-<meta name="author" content="" />
+<meta name="description" content="Learning Plus" />
+<meta name="author" content="Falore Oluwajuwon" />
 <!--[if IE]>
     	<meta http-equiv="X-UA-Compatible" content="IE=edge">
     <![endif]-->
@@ -18,7 +18,7 @@
 	<![endif]-->
 
 <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
-<title>LearnMate | Contact US</title>
+<title>LearnMate | GET TUTOR</title>
 
 <link rel="stylesheet" type="text/css" href="css/animate.css" />
 <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
@@ -36,6 +36,8 @@
 	<link rel="stylesheet" type="text/css" href="css/fonts/material-design-iconic-font/css/material-design-iconic-font.min.css">
 
 <link href='https://fonts.googleapis.com/css?family=Raleway:800,500%7CLato:400,300,400italic,700,700italic,300italic,900italic,900,100,100italic%7CRoboto:400,500,600' rel='stylesheet' type='text/css' />
+<link rel="stylesheet" href="sweetalert2/dist/sweetalert2.min.css">
+<script src="sweetalert2/dist/sweetalert2.all.min.js"></script>
  <script src="https://www.gstatic.com/firebasejs/7.15.4/firebase-app.js"></script>
 	<script src="https://www.gstatic.com/firebasejs/7.15.4/firebase-auth.js"></script>
 <script src="https://www.gstatic.com/firebasejs/7.15.4/firebase-database.js"></script>
@@ -66,8 +68,11 @@
 </script>
 
 <header>
+	 
         <nav>
             <div class="container">
+            	<div id="loading"></div>
+
                 <div id="navbar" class="navbar navbar-default">
                     <div class="navbar-header col-md-2 col-sm-4 col-xs-4">
                         <a class="navbar-brand trigger" href="index.html" title="LearnMate"><img alt="Logo" src="images/logo_bk.png"></a>
@@ -83,7 +88,7 @@
                                     <a href="index.html">Home</a>
                                 </li>
                                 <li><a class="trigger" href="course_list.html">Courses</a></li>
-                                <li><a class="trigger" href="#">Become A Tutor</a></li>
+                                <li><a class="trigger" href="becometutor.html">Become A Tutor</a></li>
                                 <li><a class="trigger" href="#"> Get A Tutor</a></li>
                                 <li><a class="trigger" href="aboutus.html">The Company</a></li>
                                 <li><a class="trigger" href="teachers.html">Tutors</a></li>
@@ -113,10 +118,10 @@
 <div class="breadcrumb_wrap" data-stellar-background-ratio="0.3" style="background: url(images/slider_inclass.jpg); background-attachment: fixed; background-position: 50% 50%;">
 <div class="breadcrumb_wrap_inner">
 <div class="container">
-<h1>Contact Us</h1>
+<h1>GET TUTOR</h1>
 <ul class="breadcrumbs">
 <li><a href="index.html">Home</a> /</li>
-<li>Contact Us</li>
+<li>Get Tutor</li>
 </ul>
 </div>
 </div>
@@ -152,18 +157,18 @@
     </div>
     <div class="form-group col-md-6">
       <label for="lastname">Last Name</label>
-      <input type="text" name="lastname" class="form-control" id="client_lname" placeholder="Last Name">
+      <input type="text" required="required" name="lastname" class="form-control" id="client_lname" placeholder="Last Name">
     </div>
   </div>
   <div class="form-row">
     <div class="form-group col-md-6">
       <label for="email">Email</label>
-      <input type="email" name="email" class="form-control" id="email-address" placeholder="Email Address">
+      <input type="email" required="required" name="email" class="form-control" id="email-address" placeholder="Email Address">
       
     </div>
     <div class="form-group col-md-6">
       <label for="inputPassword4">Class Type*</label>
-      <select id="classType" class="form-control">
+      <select id="classType" class="form-control" required="required">
         <option value="Day" disabled selected>Class Type*</option>
 		<option value="online">Online</option>
 		<option value="offline">Offline</option>
@@ -175,11 +180,11 @@
   <div class="form-row">
     <div class="form-group col-md-6">
       <label for="inputCity">Phone Number</label>
-      <input type="number" class="form-control" id="clientphone">
+      <input type="number" required="required" class="form-control" id="clientphone" placeholder=" Your Active Phone Number">
     </div>
     <div class="form-group col-md-4">
       <label for="inputState">State</label>
-      <select name="date" onchange="toggleLGA(this);"  name="state" id="state" class="form-control clientstate">
+      <select name="date" onchange="toggleLGA(this);" required="required"  name="state" id="state" class="form-control clientstate">
         <option value="Day" disabled selected>Your State of residence*</option>
 			    	<option value="Abia">Abia</option>
                   <option value="Adamawa">Adamawa</option>
@@ -231,7 +236,7 @@
     <div class="form-group col-md-6">
      <label for="mydate">Lesson Should Start*:</label>
 	  <div style="position:relative">
-    <input id="mydate" type="text" class="form-control" data-date-format="dd/mm/yyyy" placeholder="Select a Date">
+    <input id="mydate" type="text" class="form-control" data-date-format="dd/mm/yyyy" placeholder="Select a Date" required="required">
 	  <span style="font-size: 20px;
     				position: absolute;
 				  	pointer-events: none;
@@ -246,7 +251,7 @@
     </div>
     <div class="form-group col-md-4">
       <label for="inputState">How Did You Hear About Us*</label>
-      <select id="clienthear" class="form-control">
+      <select id="clienthear" class="form-control" required="required">
         <option value="Day" disabled selected>How Did You Hear About Us*</option>
 							<option value="Facebook">Facebook</option>
 							<option value="Linda Ikeji">Linda Ikeji&#039;s blog</option>
@@ -273,7 +278,7 @@
     </div>
     <div class="form-group col-md-2">
       <label for="inputZip">Gender</label>
-     <select id="clientgender" class="form-control">
+     <select id="clientgender" class="form-control" required="required">
         <option value="" disabled selected>Gender*</option>
 		<option value="Male">Male</option>
 		<option value="Female">Female</option>
@@ -281,7 +286,7 @@
     </div>
   </div>
    
-  <button class="btn btn-primary nextBtn btn-lg pull-right" disabled="disabled" id="nextbtn" type="button" >Next</button>
+  <button class="btn btn-primary nextBtn btn-lg pull-right" disabled="disabled" id="nextbtn" style="cursor: default;" type="button" >Next</button>
  
                                                   
         <!-- <div class="col-xs-12">
@@ -308,7 +313,7 @@
     <div class="form-group col-md-6">
       <label for="inputEmail4">Select your Course Type*</label>
 
-     <select name="date" onchange="toggleSubject(this);"  name="state" id="clientcoursetype" class="form-control">
+     <select name="date" onchange="toggleSubject(this);"  name="state" id="clientcoursetype" class="form-control" required="required">
         <option value="Day" disabled selected>Select your Course Type*</option>
 										<option value="Mathematics">Mathematics</option>
                   <option value="English"> English</option>
@@ -341,7 +346,7 @@
   <div class="form-row">
     <div class="form-group col-md-6">
      <label for="mydate">What is the class group of the learner*:</label>
-	    <select name="classgroup" id="group" class="form-control  " >
+	    <select name="classgroup" id="group" class="form-control" required="required">
 	    	<option value="" disabled selected>What is the class group of the learner*</option>
 				 <option value="Nursery">Nursery</option>
                   <option value="Primary">Primary</option>
@@ -353,7 +358,7 @@
     </div>
     <div class="form-group col-md-4">
       <label for="inputState">Hours per day*</label>
-      <select id="timing" class="form-control">
+      <select id="timing" class="form-control" required="required">
         <option value="" disabled selected>Hours per day*</option>
 				 <option value="1">1 hour</option>
                   <option value="2">2 hours</option>
@@ -364,7 +369,7 @@
     </div>
     <div class="form-group col-md-2">
       <label for="inputZip">For how long?*</label>
-     <select id="monthly" class="form-control clientduration">
+     <select id="monthly" class="form-control clientduration" required="required">
         <option value="" disabled selected>For how long?*</option>
 				 <option value="1">1 week</option>
                   <option value="2">2 weeks</option>
@@ -440,7 +445,7 @@
                 </div> -->
                  
                 	 
-                		<button class="btn btn-primary nextBtn btn-lg pull-right" id="clientbtn" disabled="disabled" onclick="Price();" >Next</button>
+                		<button class="btn btn-primary nextBtn btn-lg pull-right" style="cursor: default;" id="clientbtn" disabled="disabled" onclick="Price();" >Next</button>
                 	 
                 	 
                 		<button class="btn btn-secondary prevBtn btn-lg pull-right" style="margin-right:15px; background-color: blue !important;" type="button" >Prev</button>
@@ -455,13 +460,24 @@
         <div class="col-xs-12">
             <div class="col-md-12">
                 <h3> Step 3</h3>
-                <h2>Tuition Fees</h2>
-                 <h3 style="text-transform: lowercase;" id="totallesson"></h3>
+                <h2 class="display-3">Tuition Fees</h2>
+                <div class="row" style="margin-top: 20px;">
+                	<div class="col-md-6">
+                		<label style="font-size:18px;">Breakdown</label>
+                		<h3 class="text-light" style="font-weight:bolder; font-size:17px; text-transform: lowercase;" id="totallesson"></h3> 
+ 					<!--  <h3 class="text-center" style="text-transform: lowercase;id="totallesson" ></h3> -->
+ 				</div> 
+                <div class="col-md-6">
+                	<label style="font-size:18px;">Total &#8358;</label>
+ 					<input type="text" style="width: 50%; cursor: default; font-size: 20px; font-weight:bolder;" disabled="disabled" id="priceme" name="price">
+ 				</div>	
+                </div>
+               <!--  -->
 
 
- 
- 				<h4>Total</h4>
-                <input type="text" style="width: 50%; cursor: default; font-size: 17px; font-weight:bolder;" disabled="disabled" id="priceme" name="">
+ 				
+ 			 
+                <button onclick="test();">click me</button>
                  <button type="button" onclick="payWithPaystack();" class="btn btn-success btn-lg btn-block">
                     Pay Now   <span class="glyphicon glyphicon-chevron-right"></span>
                 </button>
@@ -500,9 +516,48 @@
 
 <div class="clearfix"></div>
 
-<div class="map">
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d386554.127658701!2d-74.36011883534896!3d40.80700193013912!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew+York%2C+NY%2C+USA!5e0!3m2!1sen!2sin!4v1445612341514" allowfullscreen></iframe>
-</div>
+<div id="blog" class="blog">
+            <div class="container">
+                <div class="head_part">
+                    <h2>Frequently asked questions</h2>
+                </div>
+                <div class="dtl_wrapper">
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <div class="dtl_block">
+                            <div class="blog_info">
+                                <h3> Where will the lessons hold? </h3>
+                                <p>Lessons hold in the comfort of your home or any other location that works best for you. You can choose to have lessons delivered in-person or online by your preferred home tutor.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <div class="dtl_block">
+                            <div class="blog_info">
+                                <h3> What happens if I’m not satisfied with my tutor? </h3>
+                                <p>In the unlikely event that you’re not satisfied with your tutor, we’ll immediately replace the tutor or refund your balance.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <div class="dtl_block">
+                            <div class="blog_info">
+                                <h3> How do you verify your tutors? </h3>
+                                <p>Each tutor is thoroughly screened for subject expertise, personality, and safety. In fact, before we accept any tutor we verify their government-issued ID cards and online profiles, conduct lenghty interviews, test their knowledge of each subject and verify their guarantors to ensure your peace of mind.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <div class="dtl_block">
+                            <div class="blog_info">
+                                <h3> How does payment work? </h3>
+                                <p>Lesson cost depends on your location, number of students and lesson duration. You can pay online or via bank transfer when you’ve selected your preferred tutor and are ready to begin lessons.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
 
 <div class="clearfix"></div>
 </div>
@@ -595,7 +650,7 @@
 <div class="copyright">
 <div class="container">
 <div class="row">
-<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 coppyright_txt"> <a target="_blank" href="https://www.templateshub.net">Templates Hub</a> </div>
+<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 coppyright_txt"> <a target="_blank" href="https://www.faloreoluwajuwon.netlify.com">Design by: Falore Oluwajuwon</a> </div>
 <div class="time_available col-lg-3 col-md-3 col-sm-6 col-xs-6"><i class="fa fa-clock-o"></i> Mon - Sat &nbsp;&nbsp;(9am - 5pm) &nbsp;&nbsp;&nbsp;&nbsp;</div>
 <div class="social col-lg-3 col-md-3 col-sm-6 col-xs-6">
 <ul class="pull-right">
@@ -622,7 +677,7 @@
 <script type="text/javascript" src="js/bootstrap-datepicker.js"></script>
 <script type="text/javascript" src="js/datePicker.js"></script>
 <script src="js/get.js"></script>
-<script src="js/clientData.js"></script>
+
 <script src="js/courses.js"></script>
 <script src="js/lga.js"></script> 
 <!-- <script src="js/selectCount.js"></script>  -->
@@ -630,6 +685,7 @@
  
 <script src="https://js.paystack.co/v1/inline.js"></script>
 <script type="text/javascript" src="js/price.js"></script>
+<script src="js/clientData.js"></script>
 <script type="text/javascript" src="js/owl-carousel.js"></script>
 <script type="text/javascript" src="js/js-functions.js"></script>
 </body>
