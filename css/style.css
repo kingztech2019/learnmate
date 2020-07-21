@@ -22,3 +22,38 @@ body{font-size:15px;font-family:lato,helvetica neue,helvetica,roboto,arial,sans-
     input{
     	border: 2px solid #e9ecef !important;
     }
+    .contain {
+  border: 2px solid #ccc;
+  background-color: #eee;
+  border-radius: 5px;
+  padding: 16px;
+  margin: 16px 0
+}
+
+.contain::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.contain img {
+  float: left;
+  margin-right: 20px;
+  border-radius: 50%;
+}
+
+.contain span {
+  font-size: 20px;
+  margin-right: 15px;
+}
+
+@media (max-width: 500px) {
+  .contain {
+      text-align: center;
+  }
+  .contain img {
+      margin: auto;
+      float: none;
+      display: block;
+  }
+}
