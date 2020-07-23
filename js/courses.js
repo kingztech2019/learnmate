@@ -17,55 +17,55 @@
   $("#subjectcourse")
   .html(`
             <div class="col-lg" >
-    <input class="form-check-input" style="float: left !important; margin:5px -13px !important;" type="checkbox" id="Mathematics" value="Basic Mathematics">
+    <input class="form-check-input" style="float: left !important; margin:5px -15px !important;" type="checkbox" id="Mathematics" value="Basic Mathematics">
   <label class="form-check-label" for="inlineCheckbox2">Basic Mathematics</label>
  
                     </div>
                     <div class="col-lg" >
  
-  <input class="form-check-input" style="float: left !important; margin:5px -13px !important;" type="checkbox" id="gmathematics" value="General Mathematics">
+  <input class="form-check-input" style="float: left !important; margin:5px -15px !important;" type="checkbox" id="gmathematics" value="General Mathematics">
   <label class="form-check-label" for="inlineCheckbox2">General Mathematics</label>
  
                     </div>
                     <div class="col-lg" >
  
-  <input class="form-check-input" style="float: left !important; margin:5px -13px !important;" type="checkbox" id="Quantitative" value="Quantitative Reasoning">
+  <input class="form-check-input" style="float: left !important; margin:5px -15px !important;" type="checkbox" id="Quantitative" value="Quantitative Reasoning">
   <label class="form-check-label" for="inlineCheckbox2">Quantitative Reasoning</label>
  
                     </div>
                     <div class="col-lg" >
  
-  <input class="form-check-input" style="float: left !important; margin:5px -13px !important;" type="checkbox" id="algebra" value="Algebra">
+  <input class="form-check-input" style="float: left !important; margin:5px -15px !important;" type="checkbox" id="algebra" value="Algebra">
   <label class="form-check-label" for="inlineCheckbox2">Algebra</label>
  
                     </div>
                     <div class="col-lg" >
  
-  <input class="form-check-input" style="float: left !important; margin:5px -13px !important;" type="checkbox" id="further" value="Further Mathematics">
+  <input class="form-check-input" style="float: left !important; margin:5px -15px !important;" type="checkbox" id="further" value="Further Mathematics">
   <label class="form-check-label" for="inlineCheckbox2">Further Mathematics</label>
  
                     </div>
                     <div class="col-lg" >
  
-  <input class="form-check-input" style="float: left !important; margin:5px -13px !important;" type="checkbox" id="Calculus" value="Calculus">
+  <input class="form-check-input" style="float: left !important; margin:5px -15px !important;" type="checkbox" id="Calculus" value="Calculus">
   <label class="form-check-label" for="inlineCheckbox2">Calculus</label>
  
                     </div>
                     <div class="col-lg" >
  
-  <input class="form-check-input" style="float: left !important; margin:5px -13px !important;" type="checkbox" id="trigonometry" value="Trigonometry">
+  <input class="form-check-input" style="float: left !important; margin:5px -15px !important;" type="checkbox" id="trigonometry" value="Trigonometry">
   <label class="form-check-label" for="inlineCheckbox2">Trigonometry</label>
  
                     </div>
                     <div class="col-lg" >
  
-  <input class="form-check-input" style="float: left !important; margin:5px -13px !important;" type="checkbox" id="SAT" value="SAT Math">
+  <input class="form-check-input" style="float: left !important; margin:5px -15px !important;" type="checkbox" id="SAT" value="SAT Math">
   <label class="form-check-label" for="inlineCheckbox2">SAT Math</label>
  
                     </div>
                     <div class="col-lg" >
  
-  <input class="form-check-input" style="float: left !important; margin:5px -13px !important;" type="checkbox" id="Geometry" value="Geometry">
+  <input class="form-check-input" style="float: left !important; margin:5px -15px !important;" type="checkbox" id="Geometry" value="Geometry">
   <label class="form-check-label" for="inlineCheckbox2">Geometry</label>
  
                     </div>
@@ -76,55 +76,55 @@
   $("#subjectcourse")
   .html(`
             <div class="col-lg" >
-    <input class="form-check-input" style="float: left !important; margin:5px -13px !important;" type="checkbox" id="english" value="English Language">
+    <input class="form-check-input" style="float: left !important; margin:5px -15px !important;" type="checkbox" id="english" value="English Language">
   <label class="form-check-label" for="inlineCheckbox2">English Language</label>
  
                     </div>
                     <div class="col-lg" >
  
-  <input class="form-check-input" style="float: left !important; margin:5px -13px !important;" type="checkbox" id="verbal" value="Verbal Reasoning">
+  <input class="form-check-input" style="float: left !important; margin:5px -15px !important;" type="checkbox" id="verbal" value="Verbal Reasoning">
   <label class="form-check-label" for="inlineCheckbox2">Verbal Reasoning</label>
  
                     </div>
                     <div class="col-lg" >
  
-  <input class="form-check-input" style="float: left !important; margin:5px -13px !important;" type="checkbox" id="englishgrammar" value="English Grammar">
+  <input class="form-check-input" style="float: left !important; margin:5px -15px !important;" type="checkbox" id="englishgrammar" value="English Grammar">
   <label class="form-check-label" for="inlineCheckbox2">English Grammar</label>
  
                     </div>
                     <div class="col-lg" >
  
-  <input class="form-check-input" style="float: left !important; margin:5px -13px !important;" type="checkbox" id="litineng" value="Lit in Eng">
+  <input class="form-check-input" style="float: left !important; margin:5px -15px !important;" type="checkbox" id="litineng" value="Lit in Eng">
   <label class="form-check-label" for="inlineCheckbox2">Lit in Eng </label>
  
                     </div>
                     <div class="col-lg" >
  
-  <input class="form-check-input" style="float: left !important; margin:5px -13px !important;" type="checkbox" id="spellings" value="Spellings">
+  <input class="form-check-input" style="float: left !important; margin:5px -15px !important;" type="checkbox" id="spellings" value="Spellings">
   <label class="form-check-label" for="inlineCheckbox2">Spellings</label>
  
                     </div>
                     <div class="col-lg" >
  
-  <input class="form-check-input" style="float: left !important; margin:5px -13px !important;" type="checkbox" id="reading" value="Reading Comprehension">
+  <input class="form-check-input" style="float: left !important; margin:5px -15px !important;" type="checkbox" id="reading" value="Reading Comprehension">
   <label class="form-check-label" for="inlineCheckbox2">Reading Comprehension</label>
  
                     </div>
                     <div class="col-lg" >
  
-  <input class="form-check-input" style="float: left !important; margin:5px -13px !important;" type="checkbox" id="toefl" value="TOEFL">
+  <input class="form-check-input" style="float: left !important; margin:5px -15px !important;" type="checkbox" id="toefl" value="TOEFL">
   <label class="form-check-label" for="inlineCheckbox2">TOEFL</label>
  
                     </div>
                     <div class="col-lg" >
  
-  <input class="form-check-input" style="float: left !important; margin:5px -13px !important;" type="checkbox" id="public" value="Public Speaking">
+  <input class="form-check-input" style="float: left !important; margin:5px -15px !important;" type="checkbox" id="public" value="Public Speaking">
   <label class="form-check-label" for="inlineCheckbox2">Public Speaking</label>
  
                     </div>
                     <div class="col-lg" >
  
-  <input class="form-check-input" style="float: left !important; margin:5px -13px !important;" type="checkbox" id="essay" value="Essay Writing">
+  <input class="form-check-input" style="float: left !important; margin:5px -15px !important;" type="checkbox" id="essay" value="Essay Writing">
   <label class="form-check-label" for="inlineCheckbox2">Essay Writing</label>
  
                     </div>
@@ -136,61 +136,61 @@ else if (document.getElementById("clientcoursetype").value=="Exam") {
   $("#subjectcourse")
   .html(`
             <div class="col-lg" >
-    <input class="form-check-input" style="float: left !important; margin:5px -13px !important;" type="checkbox" id="ielts" value="IELTS">
+    <input class="form-check-input" style="float: left !important; margin:5px -15px !important;" type="checkbox" id="ielts" value="IELTS">
   <label class="form-check-label" for="inlineCheckbox2">IELTS</label>
  
                     </div>
                     <div class="col-lg" >
  
-  <input class="form-check-input" style="float: left !important; margin:5px -13px !important;" type="checkbox" id="satmath" value="SAT Math">
+  <input class="form-check-input" style="float: left !important; margin:5px -15px !important;" type="checkbox" id="satmath" value="SAT Math">
   <label class="form-check-label" for="inlineCheckbox2">SAT Math</label>
  
                     </div>
                     <div class="col-lg" >
  
-  <input class="form-check-input" style="float: left !important; margin:5px -13px !important;" type="checkbox" id="gre" value="GRE">
+  <input class="form-check-input" style="float: left !important; margin:5px -15px !important;" type="checkbox" id="gre" value="GRE">
   <label class="form-check-label" for="inlineCheckbox2">GRE</label>
  
                     </div>
                     <div class="col-lg">
  
-  <input class="form-check-input" style="float: left !important; margin:5px -13px !important;" type="checkbox" id="toeflone" value="TOEFL">
+  <input class="form-check-input" style="float: left !important; margin:5px -15px !important;" type="checkbox" id="toeflone" value="TOEFL">
   <label class="form-check-label" for="inlineCheckbox2">TOEFL</label>
  
                     </div>
                     <div class="col-lg" >
  
-  <input class="form-check-input" style="float: left !important; margin:5px -13px !important;" type="checkbox" id="gmat" value="GMAT">
+  <input class="form-check-input" style="float: left !important; margin:5px -15px !important;" type="checkbox" id="gmat" value="GMAT">
   <label class="form-check-label" for="inlineCheckbox2">GMAT</label>
  
                     </div>
                     <div class="col-lg" >
  
-  <input class="form-check-input" style="float: left !important; margin:5px -13px !important;" type="checkbox" id="ican" value="ICAN">
+  <input class="form-check-input" style="float: left !important; margin:5px -15px !important;" type="checkbox" id="ican" value="ICAN">
   <label class="form-check-label" for="inlineCheckbox2">ICAN</label>
  
                     </div>
                     <div class="col-lg" >
  
-  <input class="form-check-input" style="float: left !important; margin:5px -13px !important;" type="checkbox" id="satwriting" value="SAT Writing">
+  <input class="form-check-input" style="float: left !important; margin:5px -15px !important;" type="checkbox" id="satwriting" value="SAT Writing">
   <label class="form-check-label" for="inlineCheckbox2">SAT Writing</label>
  
                     </div>
                     <div class="col-lg" >
  
-  <input class="form-check-input" style="float: left !important; margin:5px -13px !important;" type="checkbox" id="acca" value="ACCA">
+  <input class="form-check-input" style="float: left !important; margin:5px -15px !important;" type="checkbox" id="acca" value="ACCA">
   <label class="form-check-label" for="inlineCheckbox2">ACCA</label>
  
                     </div>
                     <div class="col-lg" >
  
-  <input class="form-check-input" style="float: left !important; margin:5px -13px !important;" type="checkbox" id="satreading" value="SAT Reading">
+  <input class="form-check-input" style="float: left !important; margin:5px -15px !important;" type="checkbox" id="satreading" value="SAT Reading">
   <label class="form-check-label" for="inlineCheckbox2">SAT Reading</label>
  
                     </div>
                     <div class="col-lg" >
  
-  <input class="form-check-input" style="float: left !important; margin:5px -13px !important;" type="checkbox" id="pmp" value="PMP">
+  <input class="form-check-input" style="float: left !important; margin:5px -15px !important;" type="checkbox" id="pmp" value="PMP">
   <label class="form-check-label" for="inlineCheckbox2">PMP</label>
  
                     </div>
@@ -201,61 +201,61 @@ else if (document.getElementById("clientcoursetype").value=="Exam") {
   $("#subjectcourse")
   .html(`
             <div class="col-lg" >
-    <input class="form-check-input" style="float: left !important; margin:5px -13px !important;" type="checkbox" id="economics" value="Economics">
+    <input class="form-check-input" style="float: left !important; margin:5px -15px !important;" type="checkbox" id="economics" value="Economics">
   <label class="form-check-label" for="inlineCheckbox2">Economics</label>
  
                     </div>
                     <div class="col-lg">
  
-  <input class="form-check-input" style="float: left !important; margin:5px -13px !important;" type="checkbox" id="accounting" value="Accounting">
+  <input class="form-check-input" style="float: left !important; margin:5px -15px !important;" type="checkbox" id="accounting" value="Accounting">
   <label class="form-check-label" for="inlineCheckbox2">Accounting</label>
  
                     </div>
                     <div class="col-lg">
  
-  <input class="form-check-input" style="float: left !important; margin:5px -13px !important;" type="checkbox" id="commerce" value="Commerce">
+  <input class="form-check-input" style="float: left !important; margin:5px -15px !important;" type="checkbox" id="commerce" value="Commerce">
   <label class="form-check-label" for="inlineCheckbox2">Commerce</label>
  
                     </div>
                     <div class="col-lg" >
  
-  <input class="form-check-input" style="float: left !important; margin:5px -13px !important;" type="checkbox" id="socialstudies" value="Social Studies">
+  <input class="form-check-input" style="float: left !important; margin:5px -15px !important;" type="checkbox" id="socialstudies" value="Social Studies">
   <label class="form-check-label" for="inlineCheckbox2">Social Studies</label>
  
                     </div>
                     <div class="col-lg" >
  
-  <input class="form-check-input" style="float: left !important; margin:5px -13px !important;" type="checkbox" id="government" value="Government">
+  <input class="form-check-input" style="float: left !important; margin:5px -15px !important;" type="checkbox" id="government" value="Government">
   <label class="form-check-label" for="inlineCheckbox2">Government</label>
  
                     </div>
                     <div class="col-lg" >
  
-  <input class="form-check-input" style="float: left !important; margin:5px -13px !important;" type="checkbox" id="business" value="Business Studies">
+  <input class="form-check-input" style="float: left !important; margin:5px -15px !important;" type="checkbox" id="business" value="Business Studies">
   <label class="form-check-label" for="inlineCheckbox2">Business Studies</label>
  
                     </div>
                     <div class="col-lg" >
  
-  <input class="form-check-input" style="float: left !important; margin:5px -13px !important;" type="checkbox" id="public" value="Public Speaking">
+  <input class="form-check-input" style="float: left !important; margin:5px -15px !important;" type="checkbox" id="public" value="Public Speaking">
   <label class="form-check-label" for="inlineCheckbox2">Public Speaking</label>
  
                     </div>
                     <div class="col-lg" >
  
-  <input class="form-check-input" style="float: left !important; margin:5px -13px !important;" type="checkbox" id="civic" value="Civic Education">
+  <input class="form-check-input" style="float: left !important; margin:5px -15px !important;" type="checkbox" id="civic" value="Civic Education">
   <label class="form-check-label" for="inlineCheckbox2">Civic Education</label>
  
                     </div>
                     <div class="col-lg" >
  
-  <input class="form-check-input" style="float: left !important; margin:5px -13px !important;" type="checkbox"  value="Career Counselling">
+  <input class="form-check-input" style="float: left !important; margin:5px -15px !important;" type="checkbox"  value="Career Counselling">
   <label class="form-check-label" for="inlineCheckbox2">Career Counselling</label>
  
                     </div>
                     <div class="col-lg" >
  
-  <input class="form-check-input" style="float: left !important; margin:5px -13px !important;" type="checkbox" id="writingb" value="Writing Business">
+  <input class="form-check-input" style="float: left !important; margin:5px -15px !important;" type="checkbox" id="writingb" value="Writing Business">
   <label class="form-check-label" for="inlineCheckbox2">Writing Business Plan</label>
  
                     </div>
@@ -266,61 +266,61 @@ else if (document.getElementById("clientcoursetype").value=="Exam") {
   $("#subjectcourse")
   .html(`
             <div class="col-lg" >
-    <input class="form-check-input" style="float: left !important; margin:5px -13px !important;" type="checkbox" id="piano" value="Piano">
+    <input class="form-check-input" style="float: left !important; margin:5px -15px !important;" type="checkbox" id="piano" value="Piano">
   <label class="form-check-label" for="inlineCheckbox2">Piano</label>
  
                     </div>
                     <div class="col-lg" >
  
-  <input class="form-check-input" style="float: left !important; margin:5px -13px !important;" type="checkbox" id="music" value="Music Theory">
+  <input class="form-check-input" style="float: left !important; margin:5px -15px !important;" type="checkbox" id="music" value="Music Theory">
   <label class="form-check-label" for="inlineCheckbox2">Music Theory</label>
  
                     </div>
                     <div class="col-lg" >
  
-  <input class="form-check-input" style="float: left !important; margin:5px -13px !important;" type="checkbox" id="guitar" value="Guitar">
+  <input class="form-check-input" style="float: left !important; margin:5px -15px !important;" type="checkbox" id="guitar" value="Guitar">
   <label class="form-check-label" for="inlineCheckbox2">Guitar</label>
  
                     </div>
                     <div class="col-lg" >
  
-  <input class="form-check-input" style="float: left !important; margin:5px -13px !important;" type="checkbox" id="voice" value="Voice Training">
+  <input class="form-check-input" style="float: left !important; margin:5px -15px !important;" type="checkbox" id="voice" value="Voice Training">
   <label class="form-check-label" for="inlineCheckbox2">Voice Training</label>
  
                     </div>
                     <div class="col-lg" >
  
-  <input class="form-check-input" style="float: left !important; margin:5px -13px !important;" type="checkbox"  value="Singing">
+  <input class="form-check-input" style="float: left !important; margin:5px -15px !important;" type="checkbox"  value="Singing">
   <label class="form-check-label" for="inlineCheckbox2">Singing</label>
  
                     </div>
                     <div class="col-lg" >
  
-  <input class="form-check-input" style="float: left !important; margin:5px -13px !important;" type="checkbox"  value="Saxophone">
+  <input class="form-check-input" style="float: left !important; margin:5px -15px !important;" type="checkbox"  value="Saxophone">
   <label class="form-check-label" for="inlineCheckbox2">Saxophone</label>
  
                     </div>
                     <div class="col-lg" >
  
-  <input class="form-check-input" style="float: left !important; margin:5px -13px !important;" type="checkbox"  value="Violin">
+  <input class="form-check-input" style="float: left !important; margin:5px -15px !important;" type="checkbox"  value="Violin">
   <label class="form-check-label" for="inlineCheckbox2">Violin</label>
  
                     </div>
                     <div class="col-lg" >
  
-  <input class="form-check-input" style="float: left !important; margin:5px -13px !important;" type="checkbox"  value="Drums">
+  <input class="form-check-input" style="float: left !important; margin:5px -15px !important;" type="checkbox"  value="Drums">
   <label class="form-check-label" for="inlineCheckbox2">Drums</label>
  
                     </div>
                     <div class="col-lg" >
  
-  <input class="form-check-input" style="float: left !important; margin:5px -13px !important;" type="checkbox"  value="Trumpet">
+  <input class="form-check-input" style="float: left !important; margin:5px -15px !important;" type="checkbox"  value="Trumpet">
   <label class="form-check-label" for="inlineCheckbox2">Trumpet</label>
  
                     </div>
                     <div class="col-lg" >
  
-  <input class="form-check-input" style="float: left !important; margin:5px -13px !important;" type="checkbox"  value="Flute">
+  <input class="form-check-input" style="float: left !important; margin:5px -15px !important;" type="checkbox"  value="Flute">
   <label class="form-check-label" for="inlineCheckbox2">Flute</label>
  
                     </div>
@@ -331,49 +331,49 @@ else if (document.getElementById("clientcoursetype").value=="Exam") {
   $("#subjectcourse")
   .html(`
             <div class="col-lg" >
-    <input class="form-check-input" style="float: left !important; margin:5px -13px !important;" type="checkbox"  value="French">
+    <input class="form-check-input" style="float: left !important; margin:5px -15px !important;" type="checkbox"  value="French">
   <label class="form-check-label" for="inlineCheckbox2">French</label>
  
                     </div>
                     <div class="col-lg" >
  
-  <input class="form-check-input" style="float: left !important; margin:5px -13px !important;" type="checkbox"  value="Yoruba">
+  <input class="form-check-input" style="float: left !important; margin:5px -15px !important;" type="checkbox"  value="Yoruba">
   <label class="form-check-label" for="inlineCheckbox2">Yoruba</label>
  
                     </div>
                     <div class="col-lg" >
  
-  <input class="form-check-input" style="float: left !important; margin:5px -13px !important;" type="checkbox"  value="Igbo">
+  <input class="form-check-input" style="float: left !important; margin:5px -15px !important;" type="checkbox"  value="Igbo">
   <label class="form-check-label" for="inlineCheckbox2">Igbo</label>
  
                     </div>
                     <div class="col-lg" >
  
-  <input class="form-check-input" style="float: left !important; margin:5px -13px !important;" type="checkbox"  value="German">
+  <input class="form-check-input" style="float: left !important; margin:5px -15px !important;" type="checkbox"  value="German">
   <label class="form-check-label" for="inlineCheckbox2">German</label>
  
                     </div>
                     <div class="col-lg" >
  
-  <input class="form-check-input" style="float: left !important; margin:5px -13px !important;" type="checkbox"  value="Hausa">
+  <input class="form-check-input" style="float: left !important; margin:5px -15px !important;" type="checkbox"  value="Hausa">
   <label class="form-check-label" for="inlineCheckbox2">Hausa</label>
  
                     </div>
                     <div class="col-lg" >
  
-  <input class="form-check-input" style="float: left !important; margin:5px -13px !important;" type="checkbox" id="arabic" value="Arabic">
+  <input class="form-check-input" style="float: left !important; margin:5px -15px !important;" type="checkbox" id="arabic" value="Arabic">
   <label class="form-check-label" for="inlineCheckbox2">Arabic</label>
  
                     </div>
                     <div class="col-lg" >
  
-  <input class="form-check-input" style="float: left !important; margin:5px -13px !important;" type="checkbox"  value="Spanish">
+  <input class="form-check-input" style="float: left !important; margin:5px -15px !important;" type="checkbox"  value="Spanish">
   <label class="form-check-label" for="inlineCheckbox2">Spanish</label>
  
                     </div>
                     <div class="col-lg" >
  
-  <input class="form-check-input" style="float: left !important; margin:5px -13px !important;" type="checkbox"  value="Ibibio">
+  <input class="form-check-input" style="float: left !important; margin:5px -15px !important;" type="checkbox"  value="Ibibio">
   <label class="form-check-label" for="inlineCheckbox2">Ibibio</label>
  
                     </div>
@@ -385,67 +385,67 @@ else if (document.getElementById("clientcoursetype").value=="Exam") {
   $("#subjectcourse")
   .html(`
             <div class="col-lg" >
-    <input class="form-check-input" style="float: left !important; margin:5px -13px !important;" type="checkbox"  value="Computer Science">
+    <input class="form-check-input" style="float: left !important; margin:5px -15px !important;" type="checkbox"  value="Computer Science">
   <label class="form-check-label" for="inlineCheckbox2">Computer Science</label>
  
                     </div>
                     <div class="col-lg" >
  
-  <input class="form-check-input" style="float: left !important; margin:5px -13px !important;" type="checkbox"  value="Microsoft Excel">
+  <input class="form-check-input" style="float: left !important; margin:5px -15px !important;" type="checkbox"  value="Microsoft Excel">
   <label class="form-check-label" for="inlineCheckbox2">Microsoft Excel</label>
  
                     </div>
                     <div class="col-lg" >
  
-  <input class="form-check-input" style="float: left !important; margin:5px -13px !important;" type="checkbox"  value="Microsoft Word">
+  <input class="form-check-input" style="float: left !important; margin:5px -15px !important;" type="checkbox"  value="Microsoft Word">
   <label class="form-check-label" for="inlineCheckbox2">Microsoft Word</label>
  
                     </div>
                     <div class="col-lg" >
  
-  <input class="form-check-input" style="float: left !important; margin:5px -13px !important;" type="checkbox"  value="Basic Computing">
+  <input class="form-check-input" style="float: left !important; margin:5px -15px !important;" type="checkbox"  value="Basic Computing">
   <label class="form-check-label" for="inlineCheckbox2">Basic Computing</label>
  
                     </div>
                     <div class="col-lg" >
  
-  <input class="form-check-input" style="float: left !important; margin:5px -13px !important;" type="checkbox"  value="Microsoft PowerPoint">
+  <input class="form-check-input" style="float: left !important; margin:5px -15px !important;" type="checkbox"  value="Microsoft PowerPoint">
   <label class="form-check-label" for="inlineCheckbox2">Microsoft PowerPoint</label>
  
                     </div>
                     <div class="col-lg" >
  
-  <input class="form-check-input" style="float: left !important; margin:5px -13px !important;" type="checkbox" id="arabic" value="Web Design">
+  <input class="form-check-input" style="float: left !important; margin:5px -15px !important;" type="checkbox" id="arabic" value="Web Design">
   <label class="form-check-label" for="inlineCheckbox2">Web Design</label>
  
                     </div>
                     <div class="col-lg" >
  
-  <input class="form-check-input" style="float: left !important; margin:5px -13px !important;" type="checkbox"  value="Autodesk AutoCAD">
+  <input class="form-check-input" style="float: left !important; margin:5px -15px !important;" type="checkbox"  value="Autodesk AutoCAD">
   <label class="form-check-label" for="inlineCheckbox2">Autodesk AutoCAD</label>
  
                     </div>
                     <div class="col-lg" >
  
-  <input class="form-check-input" style="float: left !important; margin:5px -13px !important;" type="checkbox"  value="Graphic Design">
+  <input class="form-check-input" style="float: left !important; margin:5px -15px !important;" type="checkbox"  value="Graphic Design">
   <label class="form-check-label" for="inlineCheckbox2">Graphic Design</label>
  
                     </div>
                     <div class="col-lg" >
  
-  <input class="form-check-input" style="float: left !important; margin:5px -13px !important;" type="checkbox"  value="Blog Management">
+  <input class="form-check-input" style="float: left !important; margin:5px -15px !important;" type="checkbox"  value="Blog Management">
   <label class="form-check-label" for="inlineCheckbox2">Blog Management</label>
  
                     </div>
                     <div class="col-lg" >
  
-  <input class="form-check-input" style="float: left !important; margin:5px -13px !important;" type="checkbox"  value="Video Editing">
+  <input class="form-check-input" style="float: left !important; margin:5px -15px !important;" type="checkbox"  value="Video Editing">
   <label class="form-check-label" for="inlineCheckbox2">Video Editing</label>
  
                     </div>
                     <div class="col-lg" >
  
-  <input class="form-check-input" style="float: left !important; margin:5px -13px !important;" type="checkbox"  value="Motion Graphics">
+  <input class="form-check-input" style="float: left !important; margin:5px -15px !important;" type="checkbox"  value="Motion Graphics">
   <label class="form-check-label" for="inlineCheckbox2">Motion Graphics</label>
  
                     </div>
@@ -456,55 +456,55 @@ else if (document.getElementById("clientcoursetype").value=="Exam") {
   $("#subjectcourse")
   .html(`
             <div class="col-lg" >
-    <input class="form-check-input" style="float: left !important; margin:5px -13px !important;" type="checkbox"  value="Christian Religious Studies">
+    <input class="form-check-input" style="float: left !important; margin:5px -15px !important;" type="checkbox"  value="Christian Religious Studies">
   <label class="form-check-label" for="inlineCheckbox2">Christian Religious Studies</label>
  
                     </div>
                     <div class="col-lg" >
  
-  <input class="form-check-input" style="float: left !important; margin:5px -13px !important;" type="checkbox"  value="Fine Art">
+  <input class="form-check-input" style="float: left !important; margin:5px -15px !important;" type="checkbox"  value="Fine Art">
   <label class="form-check-label" for="inlineCheckbox2">Fine Art</label>
  
                     </div>
                     <div class="col-lg" >
  
-  <input class="form-check-input" style="float: left !important; margin:5px -13px !important;" type="checkbox"  value="Home Economics">
+  <input class="form-check-input" style="float: left !important; margin:5px -15px !important;" type="checkbox"  value="Home Economics">
   <label class="form-check-label" for="inlineCheckbox2">Home Economics</label>
  
                     </div>
                     <div class="col-lg">
  
-  <input class="form-check-input" style="float: left !important; margin:5px -13px !important;" type="checkbox"  value="Create Arts">
+  <input class="form-check-input" style="float: left !important; margin:5px -15px !important;" type="checkbox"  value="Create Arts">
   <label class="form-check-label" for="inlineCheckbox2">Create Arts</label>
  
                     </div>
                     <div class="col-lg" >
  
-  <input class="form-check-input" style="float: left !important; margin:5px -13px !important;" type="checkbox"  value="Food">
+  <input class="form-check-input" style="float: left !important; margin:5px -15px !important;" type="checkbox"  value="Food">
   <label class="form-check-label" for="inlineCheckbox2">Food &amp; Nutrition</label>
  
                     </div>
                     <div class="col-lg" >
  
-  <input class="form-check-input" style="float: left !important; margin:5px -13px !important;" type="checkbox" id="Drawing" value="Drawing">
+  <input class="form-check-input" style="float: left !important; margin:5px -15px !important;" type="checkbox" id="Drawing" value="Drawing">
   <label class="form-check-label" for="inlineCheckbox2">Drawing</label>
  
                     </div>
                     <div class="col-lg" >
  
-  <input class="form-check-input" style="float: left !important; margin:5px -13px !important;" type="checkbox"  value="Political Science">
+  <input class="form-check-input" style="float: left !important; margin:5px -15px !important;" type="checkbox"  value="Political Science">
   <label class="form-check-label" for="inlineCheckbox2">Political Science</label>
  
                     </div>
                     <div class="col-lg" >
  
-  <input class="form-check-input" style="float: left !important; margin:5px -13px !important;" type="checkbox"  value="Law">
+  <input class="form-check-input" style="float: left !important; margin:5px -15px !important;" type="checkbox"  value="Law">
   <label class="form-check-label" for="inlineCheckbox2">Law</label>
  
                     </div>
                     <div class="col-lg" >
  
-  <input class="form-check-input" style="float: left !important; margin:5px -13px !important;" type="checkbox"  value="Nigerian History">
+  <input class="form-check-input" style="float: left !important; margin:5px -15px !important;" type="checkbox"  value="Nigerian History">
   <label class="form-check-label" for="inlineCheckbox2">Nigerian History</label>
  
                     </div>
@@ -516,31 +516,31 @@ else if (document.getElementById("clientcoursetype").value=="Exam") {
   $("#subjectcourse")
   .html(`
             <div class="col-lg" >
-    <input class="form-check-input" style="float: left !important; margin:5px -13px !important;" type="checkbox"  value="Makeup">
+    <input class="form-check-input" style="float: left !important; margin:5px -15px !important;" type="checkbox"  value="Makeup">
   <label class="form-check-label" for="inlineCheckbox2">Makeup</label>
  
                     </div>
                     <div class="col-lg" >
  
-  <input class="form-check-input" style="float: left !important; margin:5px -13px !important;" type="checkbox"  value="Fashion Design">
+  <input class="form-check-input" style="float: left !important; margin:5px -15px !important;" type="checkbox"  value="Fashion Design">
   <label class="form-check-label" for="inlineCheckbox2">Fashion Design</label>
  
                     </div>
                     <div class="col-lg" >
  
-  <input class="form-check-input" style="float: left !important; margin:5px -13px !important;" type="checkbox"  value="Beadmaking">
+  <input class="form-check-input" style="float: left !important; margin:5px -15px !important;" type="checkbox"  value="Beadmaking">
   <label class="form-check-label" for="inlineCheckbox2">Beadmaking</label>
  
                     </div>
                     <div class="col-lg">
  
-  <input class="form-check-input" style="float: left !important; margin:5px -13px !important;" type="checkbox"  value="Skin Care">
+  <input class="form-check-input" style="float: left !important; margin:5px -15px !important;" type="checkbox"  value="Skin Care">
   <label class="form-check-label" for="inlineCheckbox2">Skin Care consultant</label>
  
                     </div>
                     <div class="col-lg" >
  
-  <input class="form-check-input" style="float: left !important; margin:5px -13px !important;" type="checkbox"  value="makeup and makeover">
+  <input class="form-check-input" style="float: left !important; margin:5px -15px !important;" type="checkbox"  value="makeup and makeover">
   <label class="form-check-label" for="inlineCheckbox2">makeup and makeover</label>
  
                     </div>
