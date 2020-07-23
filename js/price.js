@@ -1,6 +1,4 @@
-function test(){
- document.getElementById("loading").style.display="block"
-}
+ 
 function Price() {
 	const User_Group = document.querySelector("#group").value;
 	const User_Total = document.querySelector("#total");
@@ -8,7 +6,7 @@ function Price() {
 	const User_Time = parseInt(document.querySelector("#timing").value);
 	const User_Month = parseInt(document.querySelector("#monthly").value);
 	const User_Class = document.querySelector("#classType").value;
-	var inputElems = document.getElementsByTagName("input");
+	var inputElems = document.getElementsByClassName("form-check");
 	 
 
 	// User_Client.style.display = "block";
@@ -17,6 +15,7 @@ function Price() {
 	for (var i = 0; i < inputElems.length; i++) {
 		if (inputElems[i].type == "checkbox" && inputElems[i].checked == true) {
 			count++;
+			 
 		}
 	}
 
@@ -117,13 +116,12 @@ function Price() {
 //const paymentForm = document.getElementById("paymentForm");
 //paymentForm.addEventListener("submit", payWithPaystack, false);
 function payWithPaystack() {
-	var Row = document.getElementById("somerow");
-    var Cells = Row.getElementsByTagName("td");
+	 
 	event.preventDefault();
 	let handler = PaystackPop.setup({
 		key: "pk_test_2142622923277f8881f439c84df532559b0270d6", // Replace with your public key
 		email: document.getElementById("email-address").value,
-		amount: parseInt(Cells[0].innerText) * 100,
+		amount: document.getElementById("priceme").value * 100,
 		firstname: document.getElementById("client-name").value,
 		lastname: document.getElementById("client_lname").value,
 		ref: "" + Math.floor(Math.random() * 1000000000 + 1), // generates a pseudo-unique reference. Please replace with a reference you generated. Or remove the line entirely so our API will generate one for you
@@ -133,7 +131,7 @@ function payWithPaystack() {
 		},
 		callback: function(response) {
 			let message = "Payment complete! Reference: " + response.reference;
-			alert(message);
+			 
 			rootRef.child(autoId +"/"+"payment").set({
 	     	 reference:response.reference
 	     }).then(()=>{

@@ -1,14 +1,27 @@
-﻿ // Get rid of small loading animation
+﻿ // function nextBtn(){
+ //   var Checks=document.getElementsByClassName("form-check-input")
+ //  var str = "";
+   
+ //  for(i = 0; i < 7; i++)
+ //    if(Checks[i].checked ===true){
+ //    str+=Checks[i].value + " ";
+ //    console.log(str)
+ //        alert(str)
+ //    }
+
+ // }
+ 
+ // Get rid of small loading animation
   [...document.querySelectorAll(".input-location-dependant")].forEach(element =>
     element.classList.toggle("d-none")
   );
 
   // Function to set multiple attributes at once
-  // const setAttributes = (el, attrs) => {
-  //   for (var key in attrs) {
-  //     el.setAttribute(key, attrs[key]);
-  //   }
-  // };
+  const setAttributes = (el, attrs) => {
+    for (var key in attrs) {
+      el.setAttribute(key, attrs[key]);
+    }
+  };
 
   const toggleLGA = target => {
     let state = target.value,                                                         // Get value of state

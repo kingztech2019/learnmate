@@ -9,7 +9,7 @@ const clientStart = document.querySelector("#mydate")
 //
 const clientHear = document.querySelector("#clienthear")
 const clientGender = document.querySelector("#clientgender")
-const clientCourse = document.querySelector(".select-course")
+ 
 const clientGroup = document.querySelector("#group")
 // const clientCourse = document.querySelector(".clientcat")
 // const clientClass = document.querySelector("#clientclass")
@@ -27,8 +27,10 @@ const Sunday = document.querySelector("#sunday")
 const clientBtn = document.querySelector('#clientbtn')
 const clientForm = document.querySelector('#clientform')
 const nextBtn = document.querySelector("#nextbtn")
+const nextLast = document.querySelector("#nextlast")
+const nextStep = document.querySelector('#nextstep')
 const userId = Math.floor((Math.random() * 100000) + 1)
-
+ 
 nextbtn.addEventListener("click", ()=>{
 	var status=navigator.onLine;
 	 if (status) {
@@ -68,22 +70,38 @@ clientForm.addEventListener("input", ()=>{
 })
 //
   
-clientForm.addEventListener("input", ()=>{
-	if(clientCourse.value.length>0 
-		&&clientGroup.value.length>0
- 		&&clientHour.value.length>0
+ clientForm.addEventListener("input", ()=>{
+ 	if(clientcoursetype.value.length>0
+   //      &&clientGroup.value.length>0
+   //   	&&clientHour.value.length>0
+ 		// &&clientDuration.value.length>0
+ 		// &&clientCourseType.value.length>0
+ 		
+ 		 
+  		 ){
+  		nextStep.removeAttribute('disabled')
+
+  	}else{
+  		nextStep.setAttribute('disabled', 'disabled')
+
+  	}
+ })
+
+ clientForm.addEventListener("input", ()=>{
+ 	if( clientGroup.value.length>0
+       	&&clientHour.value.length>0
  		&&clientDuration.value.length>0
  		&&clientCourseType.value.length>0
  		
  		 
- 		 ){
- 		clientBtn.removeAttribute('disabled')
+  		 ){
+  		nextLast.removeAttribute('disabled')
 
- 	}else{
- 		clientBtn.setAttribute('disabled', 'disabled')
+  	}else{
+  		nextLast.setAttribute('disabled', 'disabled')
 
- 	}
-})
+  	}
+ })
 clientForm.addEventListener("input", ()=>{
 	valid=false;
  	if (document.getElementById("monday").checked) {
@@ -104,13 +122,13 @@ clientForm.addEventListener("input", ()=>{
  		//clientBtn.removeAttribute('disabled')
  	}
  	else {
- 		clientBtn.setAttribute('disabled', 'disabled')
+ 		nextLast.setAttribute('disabled', 'disabled')
  		 
  	}
 })
 
 //final button function
-clientBtn.addEventListener("click", function(){
+nextLast.addEventListener("click", function(){
 	document.getElementById("loading").style.display="block"
 	 var status=navigator.onLine;
     if (status) {
@@ -137,6 +155,18 @@ clientBtn.addEventListener("click", function(){
 
 		}
 
+	   var Checkme=document.getElementsByClassName("form-check")
+	   var days = "";
+	   console.log(Checkme)
+
+	 
+	for(i = 0; i < 7; i++)
+		if(Checkme[i].checked ===true){
+		days+=Checkme[i].value + " ";
+		console.log(days)
+
+		}
+
 	// let checkBox = document.querySelector("input[type='checkbox']:checked")
 	// console.log(checkBox.value);
 
@@ -152,12 +182,13 @@ clientBtn.addEventListener("click", function(){
 	     	clientPhone:clientPhone.value,
 	     	clientHear:clientHear.value,
 	     	clientGender:clientGender.value,
-	     	 clientCourse:clientCourse.value,
+	     	clientGroup:clientGroup.value,
 	     	clientHour:clientHour.value,
 	     	clientStart:clientStart.value,
 	     	clientCourseType:clientCourseType.value,
 	     	clientDuration:clientDuration.value,
-	     	days:str
+	     	course:str,
+	     	Day:days
 
 	     }).then(()=>{
 				document.getElementById("loading").style.display="none";

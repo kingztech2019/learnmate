@@ -1,0 +1,139 @@
+/*span.multiselect-native-select {
+	position: relative
+}
+span.multiselect-native-select select {
+	border: 0!important;
+	clip: rect(0 0 0 0)!important;
+	height: 1px!important;
+	margin: -1px -1px -1px -3px!important;
+	overflow: hidden!important;
+	padding: 0!important;
+	position: absolute!important;
+	width: 1px!important;
+	left: 50%;
+	top: 30px
+}
+.multiselect-container {
+	position: absolute;
+	list-style-type: none;
+	margin: 0;
+	padding: 0
+}
+.multiselect-container .input-group {
+	margin: 5px
+}
+.multiselect-container>li {
+	padding: 0
+}
+.multiselect-container>li>a.multiselect-all label {
+	font-weight: 700
+}
+.multiselect-container>li.multiselect-group label {
+	margin: 0;
+	padding: 3px 20px 3px 20px;
+	height: 100%;
+	font-weight: 700
+}
+.multiselect-container>li.multiselect-group-clickable label {
+	cursor: pointer
+}
+.multiselect-container>li>a {
+	padding: 0
+}
+.multiselect-container>li>a>label {
+	margin: 0;
+	height: 100%;
+	cursor: pointer;
+	font-weight: 400;
+	padding: 3px 0 3px 30px
+}
+.multiselect-container>li>a>label.radio, .multiselect-container>li>a>label.checkbox {
+	margin: 0
+}
+.multiselect-container>li>a>label>input[type=checkbox] {
+	margin-bottom: 5px
+}
+.btn-group>.btn-group:nth-child(2)>.multiselect.btn {
+	border-top-left-radius: 4px;
+	border-bottom-left-radius: 4px
+}
+.form-inline .multiselect-container label.checkbox, .form-inline .multiselect-container label.radio {
+	padding: 3px 20px 3px 40px
+}
+.form-inline .multiselect-container li a label.checkbox input[type=checkbox], .form-inline .multiselect-container li a label.radio input[type=radio] {
+	margin-left: -20px;
+	margin-right: 0
+}*/
+#loading{
+    display: none; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100vw;
+     height: 100vh; 
+     background-color: rgba(192, 192, 192, 0.5);
+     background-image: url("3.gif");
+     background-repeat: no-repeat; 
+     background-position: center;
+      
+}
+ #example-checkbox-list-container .checkbox-list > li > a {
+        display: block;
+        padding: 3px 0;
+        clear: both;
+        font-weight: normal;
+        line-height: 1.42857143;
+        color: #333;
+        white-space: nowrap;
+    }
+ 
+    #example-checkbox-list-container .checkbox-list > li > a:hover,
+    #example-checkbox-list-container .checkbox-list > li > a:focus {
+        color: #333;
+        text-decoration: none;
+        background-color: transparent;
+    }
+ 
+    #example-checkbox-list-container .checkbox-list > .active > a,
+    #example-checkbox-list-container .checkbox-list > .active > a:hover,
+    #example-checkbox-list-container .checkbox-list > .active > a:focus {
+        color: #333;
+        text-decoration: none;
+        background-color: transparent;
+        outline: 0;
+    }
+ 
+    #example-checkbox-list-container .checkbox-list > .disabled > a,
+    #example-checkbox-list-container .checkbox-list > .disabled > a:hover,
+    #example-checkbox-list-container .checkbox-list > .disabled > a:focus {
+        color: #777;
+    }
+ 
+    #example-checkbox-list-container .checkbox-list > .disabled > a:hover,
+    #example-checkbox-list-container .checkbox-list > .disabled > a:focus {
+        text-decoration: none;
+        cursor: unset;
+        background-color: transparent;
+        background-image: none;
+        filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+    }
+ 
+    #example-checkbox-list-container .checkbox-list > li > a > label {
+        padding: 3px 0 3px 20px;
+    }
+ 
+    @media (min-width: 768px) {
+        #example-checkbox-list-container .checkbox-list > li {
+            float: left;
+            width: 33%;
+        }
+        #example-checkbox-list-container .checkbox-list-vertical > li {
+            float: none;
+            width: 100%;
+        }
+    }
+ 
+    #example-checkbox-list-container .multiselect-container.checkbox-list {
+        position: static;
+    }
