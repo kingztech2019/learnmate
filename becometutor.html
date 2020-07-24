@@ -69,10 +69,10 @@
 
         <nav>
             <div class="container">
-                <div id="loading">
+          <!--       <div id="loading">
     
 </div>
-
+ -->
                 <div id="navbar" class="navbar navbar-default">
                     <div class="navbar-header col-md-2 col-sm-4 col-xs-4">
                         <a class="navbar-brand trigger" href="index.html" title="LearnMate"><img alt="Logo" src="images/logo_bk.png"></a>
@@ -178,7 +178,7 @@
                                                             </div>
                                                         </div>
                                                         <div class="form-group">
-                                                            <label for="exampleFormControlInput1">Full Name</label>
+                                                            <label style="font-weight: bolder;" for="exampleFormControlInput1"><strong>Full Name</strong></label>
                                                             <input type="text" class="form-control" id="user_name" placeholder="Full Name">
                                                         </div>
                                                         <div class="form-group">
@@ -201,13 +201,7 @@
      <label for="mydate">Date of Birth*:</label>
       <div style="position:relative">
     <input type="date" class="form-control" placeholder="Select a Date">
-      <span style="font-size: 20px;
-                    position: absolute;
-                    pointer-events: none;
-                    top: 6px;
-                    right: 2%;" 
-            class="glyphicon glyphicon-calendar" style="cursor: pointer;"></span>
-           
+       
 <!--              <span class="alert alert-danger sample-validation">a very very long error message</span> -->
     
       
@@ -306,8 +300,10 @@
                                                                     <option value="S.S.C.E">S.S.C.E</option>
                                                                 </select>
                                                             </div>
-                                                            <button type="submit" id="hideBtn" class="btn btn_subscribe"><i class="fa fa-plus" style="padding: 6px;"></i>Add Another </button>
-                                                            <br>
+
+                                                     <input type="button" name="next" id="hideBtn" class="next action-button"value="Add Another" style="width: 150px;" />
+                                                             
+                                                             
                                                             <br>
                                                         </div>
                                                     </div>

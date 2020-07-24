@@ -350,7 +350,9 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
     color: gray;
     text-align: left
 }
-
+label{
+  font-weight: bolder !important;
+}
 #progressbar {
     margin-bottom: 30px;
     overflow: hidden;

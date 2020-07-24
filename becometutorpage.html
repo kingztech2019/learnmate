@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="zxx">
+
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="" />
+<meta name="author" content="" />
+<!--[if IE]>
+    	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <![endif]-->
+
+
+<!--[if lt IE 9]>
+        <script type="text/javascript" src="js/html5shiv.min.js"></script>
+        <script type="text/javascript" src="js/respond.min.js"></script>
+	<![endif]-->
+
+<link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+<title>LearnMate | Get A Tutor</title>
+
+<link rel="stylesheet" type="text/css" href="css/animate.css" />
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+<link rel="stylesheet" type="text/css" href="css/bootstrap-select.css" />
+<link rel="stylesheet" type="text/css" href="css/font-awesome.css" />
+<link rel="stylesheet" type="text/css" href="css/jquery.fancybox.css" />
+<link rel="stylesheet" type="text/css" href="css/mob_menu.css" />
+<link rel="stylesheet" type="text/css" href="css/reset.css" />
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+ 
+ <link rel="stylesheet" type="text/css" href="css/tutor.css" />
+ 
+<link rel="stylesheet" href="sweetalert2/dist/sweetalert2.min.css">
+<script src="sweetalert2/dist/sweetalert2.all.min.js"></script>
+ <script src="https://www.gstatic.com/firebasejs/7.15.4/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.15.4/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.15.4/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.15.4/firebase-analytics.js"></script>
+
+<link href='https://fonts.googleapis.com/css?family=Raleway:800,500%7CLato:400,300,400italic,700,700italic,300italic,900italic,900,100,100italic%7CRoboto:400,500,600' rel='stylesheet' type='text/css' />
+</head>
+<body id="home" class="cms_contact">
+	<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyD46OgRR-nfPhufuq4p5dhV8H1vZWyiovk",
+    authDomain: "eduplus-835d9.firebaseapp.com",
+    databaseURL: "https://eduplus-835d9.firebaseio.com",
+    projectId: "eduplus-835d9",
+    storageBucket: "eduplus-835d9.appspot.com",
+    messagingSenderId: "421199883240",
+    appId: "1:421199883240:web:b0d2fa07f654029054525d",
+    measurementId: "G-2NZRQNM6JB"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+  const auth = firebase.auth();
+  const database = firebase.database();
+  const rootRef = database.ref('clients');
+  autoId = rootRef.push().key
+</script>
+ 
+<header>
+	 
+        <nav>
+            <div class="container">
+            	<div id="loading"></div>
+
+                <div id="navbar" class="navbar navbar-default">
+                    <div class="navbar-header col-md-2 col-sm-4 col-xs-4">
+                        <a class="navbar-brand trigger" href="index.html" title="LearnMate"><img alt="Logo" src="images/logo_bk.png"></a>
+                    </div>
+                    <div class="col-md-9 col-sm-7 col-xs-7 pull-xs-right">
+                        <div id="dl-menu" class="dl-menuwrapper">
+                            <button class="dl-trigger visible-sm visible-xs"><i class="fa fa-bars"></i></button>
+                            <ul class="dl-menu">
+                                <li>
+                                    <h5 class="sp_module_title">LearnMate</h5>
+                                </li>
+                                <li>
+                                    <a href="index.html">Home</a>
+                                </li>
+                                <li><a class="trigger" href="course_list.html">Courses</a></li>
+                                <li><a class="trigger" href="becometutor.html">Become A Tutor</a></li>
+                                <li><a class="trigger" href="#"> Get A Tutor</a></li>
+                                <li><a class="trigger" href="aboutus.html">The Company</a></li>
+                                <li><a class="trigger" href="teachers.html">Tutors</a></li>
+                            </ul>
+                        </div>
+                        <div class="main_menu_wrap">
+                            <ul class="main_menu">
+                                <li><a class="trigger" href="index.html">Home</a>
+                                </li>
+                                <li><a class="trigger" href="course_list">Courses</a>
+                                </li>
+                                <li><a class="trigger" href="#">Become A Tutor</a></li>
+                                <li><a class="trigger" href="#"> Get A Tutor</a></li>
+                                <li><a class="trigger" href="aboutus.html">The Company</a></li>
+                                <li><a class="trigger" href="teachers.html">Tutors</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+<div class="content_wrapper">
+
+<div class="breadcrumb_wrap" data-stellar-background-ratio="0.3" style="background: url(images/slider_inclass.jpg); background-attachment: fixed; background-position: 50% 50%;">
+<div class="breadcrumb_wrap_inner">
+<div class="container">
+<h1>GET A TUTOR</h1>
+<ul class="breadcrumbs">
+<li><a href="index.html">Home</a> /</li>
+<li>Get A Tutor</li>
+</ul>
+</div>
+</div>
+</div>
+<form id="stepped" action="#" method="post">
+ <div class="container">
+  <div class="row justify-content-center">
+   <div class="col-12">
+    <h1 class="text-center py-3">Multi step form with vanilla JS in Bootstrap 4</h1>
+   </div>
+   <div class="col-md-10">
+    <div class="indicators d-flex justify-content-around py-4 text-light">
+     <div class="rounded-circle bg-secondary px-2 shadow-sm mr-2">1</div>
+     <div class="rounded-circle bg-secondary px-2 shadow-sm mr-2">2</div>
+     <div class="rounded-circle bg-secondary px-2 shadow-sm mr-2">3</div>
+      
+      
+    </div>
+   </div>
+   <div class="col-md-8">
+    <div class="fix-height position-relative">
+     <div class="steps">
+      <div class="row justify-content-center">
+       <div class="col">
+        <div class="form-group">
+         <label for="inp1">Label 1-1</label>
+         <input type="text" id="inp1" value="" class="form-control">
+        </div>
+       </div>
+       <div class="col">
+        <div class="form-group">
+         <label for="inp12">Label 1-2</label>
+          <select class="form-control" id="user_gender">
+            <option disabled selected value="">Gender</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            </select>
+        </div>
+       </div>
+       
+
+      </div>
+     </div>
+     <div class="steps">
+      <div class="form-group">
+       <label for="inp2">Label 2</label>
+       <input type="text" id="inp2" class="form-control">
+      </div>
+     </div>
+     <div class="steps">
+      <div class="form-group">
+       <label for="inp3">Label 3</label>
+       <input type="text" id="inp3" class="form-control">
+      </div>
+     </div>
+
+      
+    </div>
+   </div>
+   
+ 
+  </div>
+  <div class="row justify-content-end">
+    <div>
+        <input type="button" class="btnPrev btn btn-outline-success" value="Prev">
+        
+    </div>
+                              
+                            <div>
+                               <button type="button"  class="btnNext btn btn-outline-success">Next</button>
+                            </div>
+                        </div>
+ </div>
+</form>
+
+
+ 
+
+<div class="clearfix"></div>
+
+ 
+</div>
+
+
+<footer class="footer">
+ 
+<div class="copyright">
+<div class="container">
+<div class="row">
+<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 coppyright_txt"> <a target="_blank" href="https://www.templateshub.net">Templates Hub</a> </div>
+<div class="time_available col-lg-3 col-md-3 col-sm-6 col-xs-6"><i class="fa fa-clock-o"></i> Mon - Sat &nbsp;&nbsp;(9am - 5pm) &nbsp;&nbsp;&nbsp;&nbsp;</div>
+<div class="social col-lg-3 col-md-3 col-sm-6 col-xs-6">
+<ul class="pull-right">
+<li><a href="#">Sitemap</a></li>
+<li><a href="#">Terms</a></li>
+<li><a href="#">Privacy</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</footer>
+
+
+<div class="offcanvas_overlay"></div>
+
+
+<script type="text/javascript" src="js/jquery-3.1.0.min.js"></script>
+<script type="text/javascript" src="js/modernizr.custom.js"></script>
+<script type="text/javascript" src="js/jquery.dlmenu.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/bootstrap-select.js"></script>
+<script type="text/javascript" src="js/bootstrap-multiselect.js"></script>
+<script type="text/javascript" src="js/jquery-plugin-collection.js"></script>
+ 
+<script src="js/tutor.js"></script>
+<script src="js/lga.js"></script>
+ 
+<script src="https://js.paystack.co/v1/inline.js"></script>
+<script src="js/price.js"></script>
+<script type="text/javascript" src="js/owl-carousel.js"></script>
+<script type="text/javascript" src="js/js-functions.js"></script>
+</body>
+
+
+</html>
