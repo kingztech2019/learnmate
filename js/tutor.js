@@ -103,7 +103,7 @@ document.addEventListener("DOMContentLoaded", () => {
       rootRef.child(autoId +"/"+"personal").set({
          userId:userId,
          userName:userName.value,
-         userLast:userName.value,
+         userLast:userLast.value,
          userPhone:userPhone.value,
          userAddress:userAddress.value,
          userGender:userGender.value,
@@ -144,7 +144,7 @@ document.addEventListener("DOMContentLoaded", () => {
           
        }).then(()=>{
          document.querySelector("#loading").style.display="none";
-         console.log("save successfully")
+         window.location="profile.html"
        }).catch((err)=>{
          console.log(err)
 
