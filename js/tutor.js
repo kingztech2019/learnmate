@@ -85,7 +85,7 @@ document.addEventListener("DOMContentLoaded", () => {
     event.preventDefault();
   }
    function clickerBtn(n) {
-    // if (n == 1 && !validateForm()) return false;
+     if (n == 1 && !validateForm()) return false;
     steps[currentTab].classList.remove("active");
     currentTab = currentTab + n;
     if (currentTab >= steps.length) {
@@ -160,24 +160,24 @@ document.addEventListener("DOMContentLoaded", () => {
     showTab(currentTab);
    }
 // Do whatever validation you want
-   // function validateForm() {
-   //  let input = steps[currentTab].querySelectorAll(inputClasses),
-   //   valid = true;
-   //  for (let i = 0; i < input.length; i++) {
-   //   if (input[i].value == "") {
-   //    if (!input[i].classList.contains("invalid")) {
-   //     input[i].classList.add("invalid");
-   //    }
-   //    valid = false;
-   //   }
-   //   if (!input[i].value == "") {
-   //    if (input[i].classList.contains("invalid")) {
-   //     input[i].classList.remove("invalid");
-   //    }
-   //   }
-   //  }
-   //  return valid;
-   // }
+   function validateForm() {
+    let input = steps[currentTab].querySelectorAll(inputClasses),
+     valid = true;
+    for (let i = 0; i < input.length; i++) {
+     if (input[i].value == "") {
+      if (!input[i].classList.contains("invalid")) {
+       input[i].classList.add("invalid");
+      }
+      valid = false;
+     }
+     if (!input[i].value == "") {
+      if (input[i].classList.contains("invalid")) {
+       input[i].classList.remove("invalid");
+      }
+     }
+    }
+    return valid;
+   }
    btnPrev.addEventListener("click", () => {
     clickerBtn(-1);
    });
