@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
  // const changeImage = document.querySelector("#changeimage");
  // const changeImageTwo = document.querySelector("#changeimages");
  const userAboutSummary = document.querySelector("#user_aboutsummary");
-  const logoutBtn = document.querySelector("#logoutBtn")
+  
   
  //------------------------------------------------
    let myForm = document.querySelector(formId),
@@ -52,14 +52,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     //------------------------------------------------------------
 
-     logoutBtn.addEventListener("click", ()=>{
-   firebase.auth().signOut().then(function() {
-  window.location="index.html"
-}).catch(function(error) {
-  // An error happened.
-});
- })
-
+  
    // we'll need 4 different functions to do this
    showTab(currentTab);
 

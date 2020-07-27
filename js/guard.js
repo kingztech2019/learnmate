@@ -2,6 +2,10 @@ window.onload = (function(){
 
 	document.querySelector("#loading").style.display="block";
     firebase.auth().onAuthStateChanged(function(user){
+        if (!user) {
+            window.location="login.html"
+            document.querySelector("#loading").style.display="block";
+        }
     	document.querySelector("#loading").style.display="none";
 	    console.log(user)
  const key =  firebase.database().ref().child("users")

@@ -1,11 +1,14 @@
+const buttonLogout = document.querySelector("#buttonlogout")
 firebase.auth().onAuthStateChanged(function(user){
 	console.log(user)
 	//const buttonChange = document.querySelector("#buttonchange")
 	const buttonLogin = document.querySelector("#buttonlogin")
-	const buttonLogout = document.querySelector("#buttonlogout")
-	if (!user) {
-		 
-		 
+	
+	if (user) {
+		 $("#buttonchange").append(`
+		 	<button style="margin-top: 0;" onclick="logoutBtn();" id="buttonlogout"> Tutor Logout</button>`)
+		  
+		 buttonLogin.style.display="none";
 
 
 		
@@ -22,21 +25,29 @@ firebase.auth().onAuthStateChanged(function(user){
 // 			}
 // 		})
 	}else{
-		buttonLogin.style.display="none";
-		buttonLogout.style.display="block";
+		 
+		
  
 	}
 
 });
 
-function logoutBtn(){
-	firebase.auth().signOut().then(function() {
+// function logoutBtn(){
+// 	firebase.auth().signOut().then(function() {
+//   window.location="login.html"
+// }).catch(function(error) {
+//   // An error happened.
+// });
+// }
+ function logoutBtn(){
+ 	firebase.auth().signOut().then(function() {
   window.location="login.html"
-}).catch(function(error) {
-  // An error happened.
-});
-}
-// const logoutBtn = document.querySelector("#logoutbtn")
-// logoutBtn.addEventListener("click", ()=>{
- 
+ }).catch(function(error) {
+    // An error happened.
+  });
+ 	console.log("click me")
+ }
+// buttonLogout.addEventListener("click", ()=>{
+// 	event.preventDefault()
+//  console.log("click me")
 //  })
