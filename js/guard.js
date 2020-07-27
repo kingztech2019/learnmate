@@ -1,8 +1,9 @@
 window.onload = (function(){
+
 	document.querySelector("#loading").style.display="block";
     firebase.auth().onAuthStateChanged(function(user){
-    	document.querySelector("#loading").style.display="block";
-	    console.log("true")
+    	document.querySelector("#loading").style.display="none";
+	    console.log(user)
  const key =  firebase.database().ref().child("users")
  
 key.on("child_added", snap=>{
@@ -13,6 +14,7 @@ key.on("child_added", snap=>{
     //     window.location="exist.html"
     // }
     if (user.email==email) {
+        document.querySelector("#loading").style.display="block";
     	window.location="profile.html"
     }else{
     	console.log("you are allow")

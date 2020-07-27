@@ -32,8 +32,37 @@
 <link rel="stylesheet" type="text/css" href="css/tutor.css" />
 
 <link href='https://fonts.googleapis.com/css?family=Raleway:800,500%7CLato:400,300,400italic,700,700italic,300italic,900italic,900,100,100italic%7CRoboto:400,500,600' rel='stylesheet' type='text/css' />
+<link rel="stylesheet" href="sweetalert2/dist/sweetalert2.min.css">
+<script src="sweetalert2/dist/sweetalert2.all.min.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.15.4/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.15.4/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.15.4/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.15.4/firebase-functions.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.15.4/firebase-storage.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.15.4/firebase-analytics.js"></script>
 </head>
 <body id="home" class="cms_contact">
+	<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyD46OgRR-nfPhufuq4p5dhV8H1vZWyiovk",
+    authDomain: "eduplus-835d9.firebaseapp.com",
+    databaseURL: "https://eduplus-835d9.firebaseio.com",
+    projectId: "eduplus-835d9",
+    storageBucket: "eduplus-835d9.appspot.com",
+    messagingSenderId: "421199883240",
+    appId: "1:421199883240:web:b0d2fa07f654029054525d",
+    measurementId: "G-2NZRQNM6JB"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+  const auth = firebase.auth();
+  const functions = firebase.functions();
+  const database = firebase.database();
+  const rootRef = database.ref('users');
+  autoId = rootRef.push().key
+</script>
 
 <header>
 	 
@@ -57,7 +86,7 @@
                                 </li>
                                 <li><a class="trigger" href="course_list.html">Courses</a></li>
                                 <li><a class="trigger" href="becometutor.html">Become A Tutor</a></li>
-                                <li><a class="trigger" href="#"> Get A Tutor</a></li>
+                                <li><a class="trigger" href="gettutorinfo.html"> Get A Tutor</a></li>
                                 <li><a class="trigger" href="aboutus.html">The Company</a></li>
                                 <li><a class="trigger" href="teachers.html">Tutors</a></li>
                             </ul>
@@ -69,7 +98,7 @@
                                 <li><a class="trigger" href="course_list">Courses</a>
                                 </li>
                                 <li><a class="trigger" href="#">Become A Tutor</a></li>
-                                <li><a class="trigger" href="#"> Get A Tutor</a></li>
+                                <li><a class="trigger" href="ettutorinfo.html"> Get A Tutor</a></li>
                                 <li><a class="trigger" href="aboutus.html">The Company</a></li>
                                 <li><a class="trigger" href="teachers.html">Tutors</a></li>
                             </ul>
@@ -82,6 +111,7 @@
 
 
 <div class="content_wrapper">
+	 
 
 <div class="breadcrumb_wrap" data-stellar-background-ratio="0.3" style="background: url(images/slider_inclass.jpg); background-attachment: fixed; background-position: 50% 50%;">
 <div class="breadcrumb_wrap_inner">
@@ -100,7 +130,7 @@
  <div class="container">
   <div class="row justify-content-center">
    <div class="col-12">
-    <h1 class="text-center py-3">Multi step form with vanilla JS in Bootstrap 4</h1>
+    <h1 class="text-center py-3">Kindly fill all the forms</h1>
    </div>
    <div class="col-md-10">
     <div class="indicators d-flex justify-content-around py-4 text-light">
@@ -115,6 +145,7 @@
    <div class="col-md-8">
     <div class="fix-height position-relative">
      <div class="steps">
+
       <div class="row justify-content-center">
        <div class="col">
         <div class="form-group">
@@ -125,7 +156,7 @@
        <div class="col">
         <div class="form-group">
          <label for="inp12">Last Name</label>
-          <input type="text" id="inp1" name="lastname" required="required" placeholder="Last Name"  class="form-control">
+          <input type="text" id="lastname" name="lastname" required="required" placeholder="Last Name"  class="form-control">
         </div>
        </div>
        
@@ -141,7 +172,7 @@
        <div class="col">
         <div class="form-group">
          <label for="inp12">Email Address</label>
-        <input type="email" required="required" class="form-control" id="user_email" placeholder="name@example.com">
+        <input type="email" disabled="disabled" style="cursor: default;" required="required" class="form-control" id="user_email" placeholder="name@example.com">
         </div>
        </div>
        
@@ -161,7 +192,7 @@
        <div class="col">
         <div class="form-group">
          <label for="inp12">Date of Birth</label>
-        <input type="date" class="form-control" required="required" placeholder="Select a Date">
+        <input type="date" id="mydate" class="form-control" required="required" placeholder="Select a Date">
         </div>
        </div>
       </div>
@@ -228,7 +259,7 @@
      <div class="steps">
         
       <div class="form-group">
-        <label style="text-align: justify; font-size: 14px;">Enter your highest educational qualifications, whether in-view or completed. You can add up to 2. Please write in full, no abbreviations. E.g. write 'University of Lagos' not 'UNILAG'</label> 
+        <label style="text-align: justify; font-size: 12px;"><i>Enter your highest educational qualifications, whether in-view or completed. You can add up to 2. Please write in full, no abbreviations. E.g. write 'University of Lagos' not 'UNILAG'</i></label> 
        <label for="inp2">Name of School or Institute</label>
         <input type="text" name="school" class="form-control" id="user_school" placeholder="Name of School or Institute">
       </div>
@@ -265,7 +296,7 @@
        
       </div>
       <div class="form-group">
-        <label style="text-align: justify; font-size: 14px;">Enter your most recent work experience if any, and indicate if you currently work there. Please note that you may be required to provide proof.</label> 
+        <label style="text-align: justify; font-size: 12px;"><i>Enter your most recent work experience if any, and indicate if you currently work there. Please note that you may be required to provide proof.</i></label> 
        <label for="inp2">Name of Company</label>
         <input type="text" class="form-control" id="user_company" placeholder="Name of Company">
       </div>
@@ -315,7 +346,7 @@
        </div>
       </div>
       <div class="form-group">
-        <label style="text-align: justify; font-size: 14px;">If you teach academic subjects for nursery, primary or secondary, then select the curriculum you can teach with. Choose "none" if you teach non-academic subjects or skills.</label> 
+        <label style="text-align: justify; font-size: 12px;"><i>If you teach academic subjects for nursery, primary or secondary, then select the curriculum you can teach with. Choose "none" if you teach non-academic subjects or skills.</i></label> 
        <label for="inp2">Name of Company</label>
         <select class="form-control" id="user_curriculum">
         <option value="" selected>Choose Curriculum</option>
@@ -328,7 +359,7 @@
      </div>
      <div class="steps">
       <div class="form-group">
-        <label style="text-align: justify; font-size: 14px;">Select only the subjects and class you typically teach.Note that you MUST pass expert-level tests & assessments for each subject before you can receive students. </label> 
+        <label style="text-align: justify; font-size:12px;"><i>Select only the subjects and class you typically teach.Note that you MUST pass expert-level tests & assessments for each subject before you can receive students.</i> </label> 
        <label for="inp2">What subject or Skill do you teach?</label>
         <input type="text" class="form-control" id="user_role" placeholder="e.g Head Teacher">
       </div>
@@ -342,12 +373,12 @@
            </select>
       </div>
       <div class="form-group">
-        <label for="inp2">Tell us in ten (10) lines briefly about yourself  
-          <b>NOTE: This information will be display to our clients</b></label>
+        <label for="inp2" style="text-align: justify; font-size:12px;"><i>Tell us in ten (10) lines briefly about yourself  
+          <b>NOTE: This information will be display to our clients</b></i></label>
           <textarea class="form-control" id="user_aboutsummary" rows="3"></textarea>
       </div>
       <div class="form-group">
-        <label style="text-align: justify;" for="inp2">Your tutor profile is your best opportunity to "sell yourself" as a tutor on Tuteria. Students often look at multiple tutor profiles before selecting a tutor to contact, so you need to be thorough, yet concise in describing your tutoring abilities, qualifications, experience and teaching style.
+        <label style="text-align: justify; font-size:12px;" for="inp2"><i>Your tutor profile is your best opportunity to "sell yourself" as a tutor on Tuteria. Students often look at multiple tutor profiles before selecting a tutor to contact, so you need to be thorough, yet concise in describing your tutoring abilities, qualifications, experience and teaching style.
            <strong>Follow these important guidelines</strong> 
            <li> Write at least 2-4 paragraphs describing your tutoring and teaching qualifications and experience. Be sure to include any awards or trainings you’ve received that support your teaching credentials.
              </li>
@@ -355,45 +386,54 @@
              <li>Write as though you are talking to the client directly and encourage them to book a lesson with you.</li>
                
                 <a href="#"><b> Click here for an example to inspire yours </b></a>
-                NOTE: Do not copy </b></label>
+                NOTE: Do not copy </b></i></label>
           <textarea class="form-control" id="user_about" rows="3"></textarea>
       </div>
        
      </div>
      <div class="steps">
       <div class="form-group">
-       <label for="inp3">LearnPlus is a professional community of exceptional tutors. Upload your very best photo to attract clients to you. It must clearly show your face, and ensure you have a smile! 
+       <label for="inp3" style="text-align: justify; font-size:12px;"><i>LearnPlus is a professional community of exceptional tutors. Upload your very best photo to attract clients to you. It must clearly show your face, and ensure you have a smile! 
         <h4>PLEASE READ THIS FIRST!</h4>
           Look at the examples below before uploading yours. If your photo doesn't meet our standards, it will be rejected: 
         <li>Photo MUST be high quality, friendly and professional</li>
         <li>DON'T upload a passport, pdf, scanned or framed photo</li>
         <li>Photo must be bright and clear, NOT blurred or dark</li>
         <li>Photo background MUST look neat and presentable</li>
-        <li>Photo should not be more than 2MB in size</li></label>
+        <li>Photo should not be more than 2MB in size</li></i></label>
         <label for="inp3">Upload Your Photo:</label>
        <input type="file" name="pic" class="form-control" id="changeimage" accept="image/*">
-        <div id="myProgress">
-  <div id="myBar">10%</div>
-</div>
+        <div class="progress-wrapone">
+      <div class="progress-barone" id="pb-demoone"></div>
+
+    </div>
+    <p style="display: none; margin-top:-8px" id="imgtextone"></p>
+		<button class="btn-danger" id="removeone" style="display: none;" onclick="deletemeOne();">remove</button>
       </div>
       <div class="form-group">
-       <label for="inp3">Verify Your Offline ID
+       <label for="inp3" style="text-align: justify; font-size:12px;"><i>Verify Your Offline ID
         It appears you haven't uploaded a profile picture yet. Please click here to upload one. Snap and upload a valid ID card to complete identity verification. Your ID will be completely deleted immediately after confirmation.
         EXAMPLE: this can be your National ID, Int'l Passport, Voter's Card, Driver's License, Work ID, School ID Card or any other valid means of identification. Verifying your ID helps build trust within the Tuteria community. We'll match information from your online account to those on your ID card.
-        This step is compulsory for all tutors. Your ID is 100% secure and you'll only do this once. You may also send your ID to help@tuteria.com.</label>
+        This step is compulsory for all tutors. Your ID is 100% secure and you'll only do this once. You may also send your ID to help@tuteria.com.</i></label>
         <label for="inp3">Upload Your Photo:</label>
-       <input type="file" name="pic" class="form-control" id="changeimage" accept="image/*">
-        <div id="myProgress">
-  <div id="myBar">10%</div>
-</div>
+       <input type="file" name="pic" class="form-control" id="changeimages" accept="image/*">
+      <div class="progress-wrap">
+      <div class="progress-bar" id="pb-demo"></div>
+
+    </div>
+    <p style="display: none; margin-top:-8px" id="imgtext"></p>
+		<button class="btn-danger" id="remove" style="display: none;" onclick="deleteme();">remove</button>
+    
+
       </div>
+       
       <div class="form-group">
-        <label style="text-align: justify; font-size: 14px;">Verify Your Online ID  
+        <label style="text-align: justify; font-size: 12px;"><i>Verify Your Online ID  
         To find your Facebook username, just follow these steps: 
        <li>Go to facebook.com and login.</li>
       <li>On your facebook homepage, click on your name at the top-right of your window -in the top blue banner.</li>
       <li>The address will then be in the address bar of your browser.</li>
-      <li>Copy everything after facebook.com/ e.g if you see facebook.com/ajose, you're to copy ajose and paste below</li> </label> 
+      <li>Copy everything after facebook.com/ e.g if you see facebook.com/ajose, you're to copy ajose and paste below</li></i> </label> 
        <label for="inp2">Facebook Username</label>
          <input type="text" class="form-control" id="fb_id" placeholder="facebook username">
       </div>
@@ -448,9 +488,42 @@
 
 <div class="clearfix"></div>
 
-<div class="map">
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d386554.127658701!2d-74.36011883534896!3d40.80700193013912!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew+York%2C+NY%2C+USA!5e0!3m2!1sen!2sin!4v1445612341514" allowfullscreen></iframe>
-</div>
+<div id="blog" class="blog">
+            <div class="container">
+                <div class="head_part">
+                    <h2>Frequently asked questions</h2>
+                </div>
+                <div class="dtl_wrapper">
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <div class="dtl_block">
+                            <div class="blog_info">
+                                <h3><a href="#">This Is Your Chance to Close the Reading Achievement Gap</a></h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipicing elit, sed do eiusmod tempor incididunt ut labore sit amet, consectetur adipisicing elit, eiusmod tempor incididunt ut sed se labore.
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <div class="dtl_block">
+                            <div class="blog_info">
+                                <h3><a href="#">Do Division I Athletes Get the Academics They Deserve?</a></h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipicing elit, sed do eiusmod tempor incididunt ut labore sit amet, consectetur adipisicing elit, eiusmod tempor incididunt ut sed se labore.
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <div class="dtl_block">
+                            <div class="blog_info">
+                                <h3><a href="#">Defining Learning Analytics and the Insights it Can Bring</a></h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipicing elit, sed do eiusmod tempor incididunt ut labore sit amet, consectetur adipisicing elit, eiusmod tempor incididunt ut sed se labore.
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
 <div class="clearfix"></div>
 </div>
@@ -458,87 +531,7 @@
 
 <footer class="footer">
 <div class="container">
-<div class="row">
-
-<div class="footer_link_wrapper">
-<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-<ul class="footer_list">
-<li>
-<div class="footer_logo"><img alt="Footer Logo" src="images/logo_wt.png"></div>
-<div class="footer_txt"><p>The expert will give all the instructions in easy and compreensive way</p></div>
-<div class="footer_email"><i class="fa fa-envelope"></i> <a href="mailto:abcxyz@abc.com">support@abcxyz.com</a></div>
-<div class="footer_phone"><i class="fa fa-phone"></i> +1 800 123 1234</div>
-<div class="social_links">
-<a href="#" target="_blank" rel="external nofollow" title="Share it"><i class="fa fa-facebook"></i></a>
-<a href="#" target="_blank" rel="external nofollow" title="Tweet it"><i class="fa fa-twitter"></i></a>
-<a href="#" target="_blank" rel="external nofollow" title="Linked it"><i class="fa fa-linkedin"></i></a>
-</div>
-</li>
-</ul>
-</div>
-<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-<ul class="footer_list">
-<li>
-<h3>Latest News</h3>
-<ul class="foot_letnews_list">
-<li>
-<div class="foot_letnews_img"><img alt="" src="images/foot_latest_news1.jpg"></div>
-<div class="foot_letnews_info">
-<h4><a href="#">You'll hear a tale a tale of alorem epsumn dollare gupt animap</a></h4>
-<em>Jan 23, 2016</em>
-</div>
-</li>
-<li>
-<div class="foot_letnews_img"><img alt="" src="images/foot_latest_news2.jpg"></div>
-<div class="foot_letnews_info">
-<h4><a href="#">Here's the story of a named alorem epsumn dollare guptni</a></h4>
-<em>Feb 17, 2016</em>
-</div>
-</li>
-<li>
-<div class="foot_letnews_img"><img alt="" src="images/foot_latest_news3.jpg"></div>
-<div class="foot_letnews_info">
-<h4><a href="#">So get a witch's shawl on alorem epsumn dollare gupt</a></h4>
-<em>Mar 25, 2016</em>
-</div>
-</li>
-</ul>
-</li>
-</ul>
-</div>
-<div class="col-lg-2 col-md-2 col-sm-6 col-xs-12">
-<ul class="footer_list">
-<li>
-<h3>Links</h3>
-<ul class="footer_sublist">
-<li><a href="#" title="About">About</a></li>
-<li><a href="#" title="Courses">Courses</a></li>
-<li><a href="#" title="Blog">Blog</a></li>
-<li><a href="#" title="Gallery">Gallery</a></li>
-<li><a href="#" title="FAQ">FAQ</a></li>
-<li><a href="#" title="Contact">Contact</a></li>
-<li><a href="#" title="Become a Teacher">Become a Teacher</a></li>
-</ul>
-</li>
-</ul>
-</div>
-<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 padd_rnone">
-<div class="foot_gallery">
-<h3>Event Gallery</h3>
-<div class="col-md-4 col-xs-3"><a href="blog_right_sidebar.html"><img alt="" src="images/foot_science.jpg"></a></div>
-<div class="col-md-4 col-xs-3"><a href="blog_right_sidebar.html"><img alt="" src="images/foot_inclass.jpg"></a></div>
-<div class="col-md-4 col-xs-3"><a href="blog_right_sidebar.html"><img alt="" src="images/foot_classroom.jpg"></a></div>
-<div class="col-md-4 col-xs-3"><a href="blog_right_sidebar.html"><img alt="" src="images/foot_with_instructor.jpg"></a></div>
-<div class="col-md-4 col-xs-3"><a href="blog_right_sidebar.html"><img alt="" src="images/foot_campus.jpg"></a></div>
-<div class="col-md-4 col-xs-3"><a href="blog_right_sidebar.html"><img alt="" src="images/foot_group_in_campus.jpg"></a></div>
-<div class="col-md-4 col-xs-3"><a href="blog_right_sidebar.html"><img alt="" src="images/foot_sport.jpg"></a></div>
-<div class="col-md-4 col-xs-3"><a href="blog_right_sidebar.html"><img alt="" src="images/foot_inclass1.jpg"></a></div>
-<div class="col-md-4 col-xs-3"><a href="blog_right_sidebar.html"><img alt="" src="images/foot_graduate.jpg"></a></div>
-</div>
-</div>
-</div>
-
-</div>
+ 
 </div>
 <div class="copyright">
 <div class="container">
@@ -560,7 +553,7 @@
 
 <div class="offcanvas_overlay"></div>
 
-
+<script src="js/guard.js"></script>
 <script type="text/javascript" src="js/jquery-3.1.0.min.js"></script>
 <script type="text/javascript" src="js/modernizr.custom.js"></script>
 <script type="text/javascript" src="js/jquery.dlmenu.js"></script>
@@ -568,8 +561,10 @@
 <script type="text/javascript" src="js/bootstrap-select.js"></script>
 <script type="text/javascript" src="js/jquery-plugin-collection.js"></script>
 <script type="text/javascript" src="js/tutor.js"></script>
+
 <script src="js/lga.js"></script>
 <script src="js/courses.js"></script>
+<script type="text/javascript" src="js/upload.js"></script>
 <script type="text/javascript" src="js/owl-carousel.js"></script>
 <script type="text/javascript" src="js/js-functions.js"></script>
 </body>

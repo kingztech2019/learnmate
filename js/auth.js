@@ -1,6 +1,7 @@
 //sign up
 const signupForm = document.querySelector("#signupForm");
 const loader = document.querySelector("#loading");
+const warning = document.querySelector("#warning");
 
 signupForm.addEventListener("submit", function(e) {
 	e.preventDefault();
@@ -8,17 +9,20 @@ signupForm.addEventListener("submit", function(e) {
 	const password = signupForm["signup-password"].value;
 	const cpassword = signupForm["signup-cpassword"].value;
 	if (password != cpassword) {
-		console.log("password not match");
+		warning.innerHTML="password not match"
+		 
 		return;
+	 
 	} else {
 		loader.style.display="block";
+		warning.innerHTML=""
 		auth.createUserWithEmailAndPassword(email, password)
 			.then((cred) => {
 				var user = firebase.auth().currentUser;
 
 				user.sendEmailVerification()
 					.then(function() {
-						window.location = "becometutor.html";
+						window.location = "becometutorpage.html";
 						console.log("email verification sent");
 						loader.style.display="none";
 						// Email sent.
@@ -31,29 +35,18 @@ signupForm.addEventListener("submit", function(e) {
 			})
 			.catch((err)=>{
 				loader.style.display="none";
+				if (err.code=="auth/email-already-in-use") {
+					warning.innerHTML="The email address is already in use."
+				}else if(err.code=="auth/invalid-email"){
+					warning.innerHTML="Invalid email Address"
+				}else if (err.code=="auth/network-request-failed") {
+					warning.innerHTML="Check your Internet connection."
+				}
+				
+
 				console.log(err)
 			});
 	}
-	console.log(email, password);
-});
-firebase.auth().onAuthStateChanged(function(user){
-	if (!user) {
-		window.location="index.html"
-
-		
-// 		user.getIdTokenResult().then(idTokenResult =>{
-// 			if(idTokenResult.claims.admin){
-// 				console.log("true")
-// 				const key =  firebase.database().ref().child("users")
-// key.on("child_added", snap=>{
-// 	var name = snap.child("personal/"+"userName").val()
-// 	console.log(name)
-// 	console.log(snap.val());
-// })
-				 
-// 			}
-// 		})
-	}
-
+	 
 });
 
