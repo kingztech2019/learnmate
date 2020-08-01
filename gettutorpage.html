@@ -200,7 +200,7 @@
                                     </div>
                                     <div class="desc">
                                         <em class="title"> 
-                                            Check
+                                            Payment
                                         </em>
                                         <br/>
                                          
@@ -466,21 +466,19 @@
                   <option value="English"> English</option>
                   <option value="Exam">Exam Preparation</option>
                   <option value="Science">Science</option>
+                  <option value="Social Science">Social Science</option>
                   <option value="Business">Business &amp; Commercial</option>
                   <option value="Music">Music</option>
                   <option value="Languages">Languages</option>
                   <option value="Computer">Computer &amp; Software</option>
                   <option value="Arts">Arts &amp; Religion</option>
-                   
-                  <option value="Film">Film and photography</option>
-                  <option value="Agro-allied">Agro-allied</option>
-                  <option value="Beauty">BEAUTY & LIFESTYLE</option>
-                   
+                  <option value="Beauty">Beauty & Lifestyle</option>
                   <option value="Undergraduate">Undergraduate</option>
-                  <option value="Professional Exams">COOKING</option>
-                  <option value="Extracurricular Activity and Skill">Extracurricular Activity and Skill</option>
+                  <option value="cooking">Cooking</option>
+                  <option value="Extracurricular">Extracurricular Activities</option>
+                  <option value="handwriting">Sound & Handwriting</option>
                    
-                  <option value="Adult Learning">Adult Learning</option>
+                  
       </select>
       
                                         		
@@ -492,6 +490,19 @@
                                         <div class="row ligne" id="subjectcourse" style="margin-top: 1px;">
                                              
                                         </div>
+                                        <div class="row ligne">
+                                        	 
+                                                <div class="col-lg">
+                                                <label>
+                                                    If you cannot find your desire course, Please kindly specify below
+                                                </label>
+                                                <input type="text" id="client-other" name="others" class="form-control" placeholder="e.g Whiteboard Animation " />
+                                            </div>
+                                                    		
+                                        	 
+                                            
+                                        </div>
+
                                     </section>
                                     <footer>
                         <div class="row justify-content-end">
@@ -750,6 +761,9 @@
                                          
                                     </table>
                                     <div class="row justify-content-end" style="margin: 0px">
+                                    	<div>
+                                <input type="button" class="btn pre_btn" value="prev"/>
+                            </div>
                                         <div>
                                             <input type="submit" onclick="payWithPaystack();" value="Pay Now" class="btn btn-success"/>
                                         </div>

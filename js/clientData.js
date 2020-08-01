@@ -29,6 +29,7 @@ const clientForm = document.querySelector('#clientform')
 const nextBtn = document.querySelector("#nextbtn")
 const nextLast = document.querySelector("#nextlast")
 const nextStep = document.querySelector('#nextstep')
+const clientOther = document.querySelector('#client-other')
 const userId = Math.floor((Math.random() * 100000) + 1)
  
 nextbtn.addEventListener("click", ()=>{
@@ -148,7 +149,7 @@ nextLast.addEventListener("click", function(){
 	var Checks=document.getElementsByClassName("form-check-input")
 	var str = "";
 	 
-	for(i = 0; i < 7; i++)
+	for(i = 0; i < Checks.length; i++)
 		if(Checks[i].checked ===true){
 		str+=Checks[i].value + " ";
 		console.log(str)
@@ -187,6 +188,7 @@ nextLast.addEventListener("click", function(){
 	     	clientStart:clientStart.value,
 	     	clientCourseType:clientCourseType.value,
 	     	clientDuration:clientDuration.value,
+	     	clientOther:clientOther.value,
 	     	course:str,
 	     	Day:days
 

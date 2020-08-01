@@ -71,7 +71,7 @@
                     </div>
      
          `)
-  console.log("working")
+   
 }else if (document.getElementById("clientcoursetype").value=="English") {
   $("#subjectcourse")
   .html(`
@@ -130,7 +130,7 @@
                     </div>
      
          `)
-  console.log("working")
+  
 }
 else if (document.getElementById("clientcoursetype").value=="Exam") {
   $("#subjectcourse")
@@ -194,21 +194,65 @@ else if (document.getElementById("clientcoursetype").value=="Exam") {
   <label class="form-check-label" for="inlineCheckbox2">PMP</label>
  
                     </div>
-     
-         `)
-  console.log("working")
-}else if (document.getElementById("clientcoursetype").value=="Business") {
-  $("#subjectcourse")
-  .html(`
-            <div class="col-lg" >
-    <input class="form-check-input" style="float: left !important; margin:5px -15px !important;" type="checkbox" id="economics" value="Economics">
-  <label class="form-check-label" for="inlineCheckbox2">Economics</label>
+                       <div class="col-lg" >
+ 
+  <input class="form-check-input" style="float: left !important; margin:5px -15px !important;" type="checkbox" id="checkpoint" value="checkpoint">
+  <label class="form-check-label" for="inlineCheckbox2">CHECKPOINT</label>
  
                     </div>
-                    <div class="col-lg">
+                      <div class="col-lg" >
  
-  <input class="form-check-input" style="float: left !important; margin:5px -15px !important;" type="checkbox" id="accounting" value="Accounting">
-  <label class="form-check-label" for="inlineCheckbox2">Accounting</label>
+  <input class="form-check-input" style="float: left !important; margin:5px -15px !important;" type="checkbox" id="act" value="act">
+  <label class="form-check-label" for="inlineCheckbox2">ACT</label>
+ 
+                    </div>
+                       <div class="col-lg" >
+ 
+  <input class="form-check-input" style="float: left !important; margin:5px -15px !important;" type="checkbox" id="ap" value="ap">
+  <label class="form-check-label" for="inlineCheckbox2">AP</label>
+ 
+                    </div>
+                    <div class="col-lg" >
+ 
+  <input class="form-check-input" style="float: left !important; margin:5px -15px !important;" type="checkbox" id="pte" value="pte">
+  <label class="form-check-label" for="inlineCheckbox2">PTE</label>
+ 
+                    </div>
+
+     
+         `)
+   
+}else if(document.getElementById("clientcoursetype").value=="cooking"){
+  $("#subjectcourse")
+  .html(`
+    <div class="col-lg" >
+    <input class="form-check-input" style="float: left !important; margin:5px -15px !important;" type="checkbox" id="economics" value="Cake">
+  <label class="form-check-label" for="inlineCheckbox2">Cake Baking</label>
+ 
+                    </div>
+                    <div class="col-lg" >
+    <input class="form-check-input" style="float: left !important; margin:5px -15px !important;" type="checkbox" id="snacks" value="snacks">
+  <label class="form-check-label" for="inlineCheckbox2">Snacks</label>
+ 
+                    </div>
+                     
+                      <div class="col-lg" >
+    <input class="form-check-input" style="float: left !important; margin:5px -15px !important;" type="checkbox" id="foreign" value="foreign">
+  <label class="form-check-label" for="inlineCheckbox2">Foreign Dishes</label>
+ 
+                    </div>
+                    <div class="col-lg" >
+    <input class="form-check-input" style="float: left !important; margin:5px -15px !important;" type="checkbox" id="foreign" value="local">
+  <label class="form-check-label" for="inlineCheckbox2">Local Dishes</label>
+ 
+                    </div>
+
+    `)
+}else if (document.getElementById("clientcoursetype").value=="Social Science") {
+   $("#subjectcourse").html(`
+      <div class="col-lg" >
+    <input class="form-check-input" style="float: left !important; margin:5px -15px !important;" type="checkbox" id="economics" value="Economics">
+  <label class="form-check-label" for="inlineCheckbox2">Economics</label>
  
                     </div>
                     <div class="col-lg">
@@ -217,6 +261,7 @@ else if (document.getElementById("clientcoursetype").value=="Exam") {
   <label class="form-check-label" for="inlineCheckbox2">Commerce</label>
  
                     </div>
+
                     <div class="col-lg" >
  
   <input class="form-check-input" style="float: left !important; margin:5px -15px !important;" type="checkbox" id="socialstudies" value="Social Studies">
@@ -231,6 +276,44 @@ else if (document.getElementById("clientcoursetype").value=="Exam") {
                     </div>
                     <div class="col-lg" >
  
+  <input class="form-check-input" style="float: left !important; margin:5px -15px !important;" type="checkbox" id="civic" value="Civic Education">
+  <label class="form-check-label" for="inlineCheckbox2">Civic Education</label>
+ 
+                    </div>
+
+     `)
+}else if (document.getElementById("clientcoursetype").value=="Business") {
+  $("#subjectcourse")
+  .html(`
+             
+                    <div class="col-lg">
+ 
+  <input class="form-check-input" style="float: left !important; margin:5px -15px !important;" type="checkbox" id="accounting" value="Accounting">
+  <label class="form-check-label" for="inlineCheckbox2">Accounting</label>
+ 
+                    </div>
+                    <div class="col-lg">
+ 
+  <input class="form-check-input" style="float: left !important; margin:5px -15px !important;" type="checkbox" id="Digital Marketing" value="Digital Marketing">
+  <label class="form-check-label" for="inlineCheckbox2">Digital Marketing</label>
+ 
+                    </div>
+                    <div class="col-lg">
+ 
+  <input class="form-check-input" style="float: left !important; margin:5px -15px !important;" type="checkbox" id="importation" value="Importation">
+  <label class="form-check-label" for="inlineCheckbox2">Importation Business</label>
+ 
+                    </div>
+                    <div class="col-lg">
+ 
+  <input class="form-check-input" style="float: left !important; margin:5px -15px !important;" type="checkbox" id="exportation" value="Exportation">
+  <label class="form-check-label" for="inlineCheckbox2">Exportation Business</label>
+ 
+                    </div>
+                    
+                    
+                    <div class="col-lg" >
+ 
   <input class="form-check-input" style="float: left !important; margin:5px -15px !important;" type="checkbox" id="business" value="Business Studies">
   <label class="form-check-label" for="inlineCheckbox2">Business Studies</label>
  
@@ -241,12 +324,7 @@ else if (document.getElementById("clientcoursetype").value=="Exam") {
   <label class="form-check-label" for="inlineCheckbox2">Public Speaking</label>
  
                     </div>
-                    <div class="col-lg" >
- 
-  <input class="form-check-input" style="float: left !important; margin:5px -15px !important;" type="checkbox" id="civic" value="Civic Education">
-  <label class="form-check-label" for="inlineCheckbox2">Civic Education</label>
- 
-                    </div>
+                    
                     <div class="col-lg" >
  
   <input class="form-check-input" style="float: left !important; margin:5px -15px !important;" type="checkbox"  value="Career Counselling">
@@ -326,7 +404,7 @@ else if (document.getElementById("clientcoursetype").value=="Exam") {
                     </div>
      
          `)
-  console.log("working")
+   
 }else if (document.getElementById("clientcoursetype").value=="Languages") {
   $("#subjectcourse")
   .html(`
@@ -377,10 +455,62 @@ else if (document.getElementById("clientcoursetype").value=="Exam") {
   <label class="form-check-label" for="inlineCheckbox2">Ibibio</label>
  
                     </div>
+                    <div class="col-lg" >
+ 
+  <input class="form-check-input" style="float: left !important; margin:5px -15px !important;" type="checkbox"  value="Chinese">
+  <label class="form-check-label" for="inlineCheckbox2">Chinese</label>
+ 
+                    </div>
                     
      
          `)
-  console.log("working")
+   
+}else if (document.getElementById("clientcoursetype").value=="Extracurricular") {
+  $("#subjectcourse")
+  .html(`
+    <div class="col-lg" >
+    <input class="form-check-input" style="float: left !important; margin:5px -15px !important;" type="checkbox"  value="Physical">
+  <label class="form-check-label" for="inlineCheckbox2">Physical Fitness</label>
+ 
+                    </div>
+                    <div class="col-lg" >
+    <input class="form-check-input" style="float: left !important; margin:5px -15px !important;" type="checkbox"  value="Gym">
+  <label class="form-check-label" for="inlineCheckbox2">Gym</label>
+ 
+                    </div>
+      
+    `)
+}else if(document.getElementById("clientcoursetype").value=="handwriting"){
+$("#subjectcourse")
+.html(`
+  <div class="col-lg" >
+    <input class="form-check-input" style="float: left !important; margin:5px -15px !important;" type="checkbox"  value="nelson">
+  <label class="form-check-label" for="inlineCheckbox2">Nelson Handwriting</label>
+ 
+                    </div>
+                    <div class="col-lg" >
+    <input class="form-check-input" style="float: left !important; margin:5px -15px !important;" type="checkbox"  value="cursive">
+  <label class="form-check-label" for="inlineCheckbox2">Cursive Handwriting</label>
+ 
+                    </div>
+                    <div class="col-lg" >
+    <input class="form-check-input" style="float: left !important; margin:5px -15px !important;" type="checkbox"  value="jolly">
+  <label class="form-check-label" for="inlineCheckbox2">Jolly Phonics</label>
+ 
+                    </div>
+                      <div class="col-lg" >
+    <input class="form-check-input" style="float: left !important; margin:5px -15px !important;" type="checkbox"  value="literacy">
+  <label class="form-check-label" for="inlineCheckbox2">Literacy</label>
+ 
+                    </div>
+                     <div class="col-lg" >
+    <input class="form-check-input" style="float: left !important; margin:5px -15px !important;" type="checkbox"  value="Numecracy">
+  <label class="form-check-label" for="inlineCheckbox2">Numecracy</label>
+ 
+                    </div>
+
+  `)
+  
 }else if (document.getElementById("clientcoursetype").value=="Computer") {
   $("#subjectcourse")
   .html(`
@@ -445,13 +575,25 @@ else if (document.getElementById("clientcoursetype").value=="Exam") {
                     </div>
                     <div class="col-lg" >
  
+  <input class="form-check-input" style="float: left !important; margin:5px -15px !important;" type="checkbox"  value="Photography">
+  <label class="form-check-label" for="inlineCheckbox2">Photography</label>
+ 
+                    </div>
+                    <div class="col-lg" >
+ 
   <input class="form-check-input" style="float: left !important; margin:5px -15px !important;" type="checkbox"  value="Motion Graphics">
   <label class="form-check-label" for="inlineCheckbox2">Motion Graphics</label>
  
                     </div>
+                     <div class="col-lg" >
+ 
+  <input class="form-check-input" style="float: left !important; margin:5px -15px !important;" type="checkbox"  value="Motion Graphics">
+  <label class="form-check-label" for="inlineCheckbox2">Mobile Application</label>
+ 
+                    </div>
      
          `)
-  console.log("working")
+ 
 }else if (document.getElementById("clientcoursetype").value=="Arts") {
   $("#subjectcourse")
   .html(`
@@ -464,6 +606,12 @@ else if (document.getElementById("clientcoursetype").value=="Exam") {
  
   <input class="form-check-input" style="float: left !important; margin:5px -15px !important;" type="checkbox"  value="Fine Art">
   <label class="form-check-label" for="inlineCheckbox2">Fine Art</label>
+ 
+                    </div>
+                    <div class="col-lg" >
+ 
+  <input class="form-check-input" style="float: left !important; margin:5px -15px !important;" type="checkbox"  value="Customisation">
+  <label class="form-check-label" for="inlineCheckbox2">Customisation</label>
  
                     </div>
                     <div class="col-lg" >
@@ -528,6 +676,12 @@ else if (document.getElementById("clientcoursetype").value=="Exam") {
                     </div>
                     <div class="col-lg" >
  
+  <input class="form-check-input" style="float: left !important; margin:5px -15px !important;" type="checkbox"  value="Gele">
+  <label class="form-check-label" for="inlineCheckbox2">Gele-tying</label>
+ 
+                    </div>
+                    <div class="col-lg" >
+ 
   <input class="form-check-input" style="float: left !important; margin:5px -15px !important;" type="checkbox"  value="Beadmaking">
   <label class="form-check-label" for="inlineCheckbox2">Beadmaking</label>
  
@@ -548,7 +702,68 @@ else if (document.getElementById("clientcoursetype").value=="Exam") {
                      
      
          `)
-  console.log("working")
+   
+}else if (document.getElementById("clientcoursetype").value=="Science") {
+  $("#subjectcourse")
+  .html(`
+            <div class="col-lg" >
+    <input class="form-check-input" style="float: left !important; margin:5px -15px !important;" type="checkbox"  value="Basic Sciences">
+  <label class="form-check-label" for="inlineCheckbox2">Basic Sciences</label>
+ 
+                    </div>
+                    <div class="col-lg" >
+ 
+  <input class="form-check-input" style="float: left !important; margin:5px -15px !important;" type="checkbox"  value="Chemistry">
+  <label class="form-check-label" for="inlineCheckbox2">Chemistry</label>
+ 
+                    </div>
+                    <div class="col-lg" >
+ 
+  <input class="form-check-input" style="float: left !important; margin:5px -15px !important;" type="checkbox"  value="Biology">
+  <label class="form-check-label" for="inlineCheckbox2">Biology</label>
+ 
+                    </div>
+                    <div class="col-lg">
+ 
+  <input class="form-check-input" style="float: left !important; margin:5px -15px !important;" type="checkbox"  value="Physics">
+  <label class="form-check-label" for="inlineCheckbox2">Physics</label>
+ 
+                    </div>
+                    <div class="col-lg" >
+ 
+  <input class="form-check-input" style="float: left !important; margin:5px -15px !important;" type="checkbox"  value="Basic Technology">
+  <label class="form-check-label" for="inlineCheckbox2">Basic Technology</label>
+ 
+                    </div>
+                    <div class="col-lg" >
+ 
+  <input class="form-check-input" style="float: left !important; margin:5px -15px !important;" type="checkbox"  value="Agricultural">
+  <label class="form-check-label" for="inlineCheckbox2">Agricultural Science</label>
+ 
+                    </div>
+                     <div class="col-lg" >
+ 
+  <input class="form-check-input" style="float: left !important; margin:5px -15px !important;" type="checkbox"  value="Organic">
+  <label class="form-check-label" for="inlineCheckbox2">Organic Chemistry</label>
+ 
+                    </div>
+                    <div class="col-lg" >
+ 
+  <input class="form-check-input" style="float: left !important; margin:5px -15px !important;" type="checkbox"  value="Inorganic">
+  <label class="form-check-label" for="inlineCheckbox2">Inorganic Chemistry</label>
+ 
+                    </div>
+                    <div class="col-lg" >
+ 
+  <input class="form-check-input" style="float: left !important; margin:5px -15px !important;" type="checkbox"  value="Geography">
+  <label class="form-check-label" for="inlineCheckbox2">Geography</label>
+ 
+                    </div>
+                     
+                     
+     
+         `)
+   
 }
 
 }
