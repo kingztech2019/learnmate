@@ -8,6 +8,11 @@ loginForm.addEventListener("submit", function(e) {
 	const email = loginForm["login-email"].value;
 	const password = loginForm["login-password"].value;
 	loader.style.display="block";
+	if(!email&&!password){
+		loader.style.display="none";
+
+	}
+	
 		auth.signInWithEmailAndPassword(email, password)
 			.then((cred) => {
 				loader.style.display="none";

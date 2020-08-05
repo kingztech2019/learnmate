@@ -38,7 +38,7 @@ changeImage.addEventListener("change", (e) => {
 		},
 		function(error) {
 			// Handle unsuccessful uploads
-			elem.innerHTML = "unable to upload your image";
+			 
 		},
 		function() {
 			// Handle successful uploads on complete

@@ -150,7 +150,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
        })
      
-  }
+  }else{
+    return false;
+  } 
 })
       
        

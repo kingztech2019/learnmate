@@ -31,27 +31,31 @@
     <link rel="stylesheet" type="text/css" href="css/style.css" />
     <link href='https://fonts.googleapis.com/css?family=Raleway:800,500%7CLato:400,300,400italic,700,700italic,300italic,900italic,900,100,100italic%7CRoboto:400,500,600' rel='stylesheet' type='text/css' />
     <script src="https://www.gstatic.com/firebasejs/7.15.4/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.15.4/firebase-auth.js"></script>
-<script src="https://www.gstatic.com/firebasejs/7.15.4/firebase-database.js"></script>
-<script src="https://www.gstatic.com/firebasejs/7.15.4/firebase-functions.js"></script>
-<script src="https://www.gstatic.com/firebasejs/7.15.4/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-functions.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-storage.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-analytics.js"></script>
+
 </head>
 
 <body id="home" class="cms_index2">
     <script>
   // Your web app's Firebase configuration
+  // Your web app's Firebase configuration
   var firebaseConfig = {
-    apiKey: "AIzaSyD46OgRR-nfPhufuq4p5dhV8H1vZWyiovk",
-    authDomain: "eduplus-835d9.firebaseapp.com",
-    databaseURL: "https://eduplus-835d9.firebaseio.com",
-    projectId: "eduplus-835d9",
-    storageBucket: "eduplus-835d9.appspot.com",
-    messagingSenderId: "421199883240",
-    appId: "1:421199883240:web:b0d2fa07f654029054525d",
-    measurementId: "G-2NZRQNM6JB"
+    apiKey: "AIzaSyCP_kx_LbDrs0dUD4oVgroKTzzTZvSsb1s",
+    authDomain: "learningplus-e1e0f.firebaseapp.com",
+    databaseURL: "https://learningplus-e1e0f.firebaseio.com",
+    projectId: "learningplus-e1e0f",
+    storageBucket: "learningplus-e1e0f.appspot.com",
+    messagingSenderId: "791152600513",
+    appId: "1:791152600513:web:7bb516f464883d811bbb40",
+    measurementId: "G-C02S9BV15R"
   };
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
    
   const auth = firebase.auth();
   const database = firebase.database();
@@ -97,7 +101,7 @@
                                 </li>
                                 <li><a class="trigger" href="becometutorpage.html">Become A Tutor</a></li>
                                 <li><a class="trigger" href="gettutorinfo.html"> Get A Tutor</a></li>
-                                <li><a class="trigger" href="teachers.html">Tutors</a></li>
+                                 
                                 <li><a class="trigger" href="aboutus.html">The Company</a>
                                 </li>
                             </ul>
@@ -113,7 +117,7 @@
                                 <li><a class="trigger" href="gettutorinfo.html"> Get A Tutor</a></li>
                                 <li><a class="trigger" href="aboutus.html">The Company</a>
                                 </li>
-                                <li><a class="trigger" href="teachers.html">Tutors</a></li>
+                                 
                             </ul>
                         </div>
                     </div>
@@ -329,7 +333,7 @@
                         <div class="course_block">
                             <div class="img_wrap">
                                 <img alt="Science" src="images/science.jpg">
-                                <div class="course_img_hoverlay_btn"><a href="course_grid.html" title="View More" class="fa fa-eye"></a></div>
+                                <div class="course_img_hoverlay_btn"><a href="course_list.html" title="View More" class="fa fa-eye"></a></div>
                             </div>
                             <div class="science">
                                 <div class="icon"><i class="fa fa-desktop"></i></div>
@@ -345,7 +349,7 @@
                         <div class="course_block">
                             <div class="img_wrap">
                                 <img alt="Accounting" src="images/accounting.jpg">
-                                <div class="course_img_hoverlay_btn"><a href="course_grid.html" title="View More" class="fa fa-eye"></a></div>
+                                <div class="course_img_hoverlay_btn"><a href="course_list.html" title="View More" class="fa fa-eye"></a></div>
                             </div>
                             <div class="accounts">
                                 <div class="icon"><i class="fa fa-sort-alpha-asc"></i></div>
@@ -361,7 +365,7 @@
                         <div class="course_block">
                             <div class="img_wrap">
                                 <img alt="Business" src="images/business.jpg">
-                                <div class="course_img_hoverlay_btn"><a href="course_grid.html" title="View More" class="fa fa-eye"></a></div>
+                                <div class="course_img_hoverlay_btn"><a href="course_list.html" title="View More" class="fa fa-eye"></a></div>
                             </div>
                             <div class="business">
                                 <div class="icon"><i class="fa fa-line-chart"></i></div>
@@ -377,7 +381,7 @@
                         <div class="course_block">
                             <div class="img_wrap">
                                 <img alt="Psychology" src="images/psychology.jpg">
-                                <div class="course_img_hoverlay_btn"><a href="course_grid.html" title="View More" class="fa fa-eye"></a></div>
+                                <div class="course_img_hoverlay_btn"><a href="course_list.html" title="View More" class="fa fa-eye"></a></div>
                             </div>
                             <div class="psychology">
                                 <div class="icon"><i class="fa fa-universal-access"></i></div>
@@ -393,7 +397,7 @@
                         <div class="course_block">
                             <div class="img_wrap">
                                 <img alt="Food &amp; Drinking" src="images/food.jpg">
-                                <div class="course_img_hoverlay_btn"><a href="course_grid.html" title="View More" class="fa fa-eye"></a></div>
+                                <div class="course_img_hoverlay_btn"><a href="course_list.html" title="View More" class="fa fa-eye"></a></div>
                             </div>
                             <div class="food">
                                 <div class="icon"><i class="fa fa-cutlery"></i></div>
@@ -409,7 +413,7 @@
                         <div class="course_block">
                             <div class="img_wrap">
                                 <img alt="Arts &amp; Media" src="images/art.jpg">
-                                <div class="course_img_hoverlay_btn"><a href="course_grid.html" title="View More" class="fa fa-eye"></a></div>
+                                <div class="course_img_hoverlay_btn"><a href="course_list.html" title="View More" class="fa fa-eye"></a></div>
                             </div>
                             <div class="arts">
                                 <div class="icon"><i class="fa fa-camera"></i></div>
@@ -496,13 +500,11 @@
                 <div class="slide">
                     <div class="container">
                         <div class="testimonial_txt_wrap">
-                            <div class="client_name">Leon Thompson</div>
-                            <div class="client_role">Founder of Cenix Developers from 2014</div>
+                            <div class="client_name">Osebeyo Emmanuel </div>
+                            <div class="client_role">Manager</div>
                             <div class="client_message">
                                 <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore, Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                                    incididunt ut labore.
+                                    Learning plus has helped to give our son a purpose. I have seen huge growth in his self esteem. The tutors are outstanding, they made him gained the knowledge he needed while still allow him to express his individuality. My son has learned more than we could expect.
                                 </p>
                             </div>
                         </div>
@@ -512,53 +514,24 @@
                 <div class="slide">
                     <div class="container">
                         <div class="testimonial_txt_wrap">
-                            <div class="client_name">Ashley Moody</div>
-                            <div class="client_role">Project Manager of Cenix Developers from 2014</div>
+                            <div class="client_name">Omidiora Olamide</div>
+                            <div class="client_role">Financial advisor</div>
                             <div class="client_message">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore, Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                                    incididunt ut labore.</p>
+                                <p>Thank you for everything you have done to help my daughter with her handwriting and pencil grip. We have seen amazing result. We are so pleased with her improvements. You have made handwriting fun for her. I am thankful for that.</p>
                             </div>
                         </div>
                         <div class="client_photo"><img src="images/ashley_moody.jpg" alt="Ashley Moody" /></div>
                     </div>
                 </div>
-                <div class="slide">
-                    <div class="container">
-                        <div class="testimonial_txt_wrap">
-                            <div class="client_name">Jerry Mack</div>
-                            <div class="client_role">Web Developer of Cenix Developers from 2014</div>
-                            <div class="client_message">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore, Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                                    incididunt ut labore.</p>
-                            </div>
-                        </div>
-                        <div class="client_photo"><img src="images/jerry_mack.jpg" alt="Jerry Mack" /></div>
-                    </div>
-                </div>
-                <div class="slide">
-                    <div class="container">
-                        <div class="testimonial_txt_wrap">
-                            <div class="client_name">Anna Shaw</div>
-                            <div class="client_role">Graphic Developer of Cenix Developers from 2014</div>
-                            <div class="client_message">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore, Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                                    incididunt ut labore.</p>
-                            </div>
-                        </div>
-                        <div class="client_photo"><img src="images/anna_shaw.jpg" alt="Anna Shaw" /></div>
-                    </div>
-                </div>
+                 
+                 
             </div>
             <div class="testimonials-nav__wrap">
                 <div class="container">
                     <div class="testimonials-nav">
                         <div class="slide_s"><img src="images/leon_thompson_s.jpg" alt="1" /></div>
                         <div class="slide_s"><img src="images/ashley_moody_s.jpg" alt="2" /></div>
-                        <div class="slide_s"><img src="images/jerry_mack_s.jpg" alt="3" /></div>
-                        <div class="slide_s"><img src="images/anna_shaw_s.jpg" alt="4" /></div>
+                          
                     </div>
                 </div>
             </div>
@@ -566,107 +539,58 @@
         <div id="team" class="team">
             <div class="container">
                 <div class="head_part">
-                    <h2>Meet Our Faculty</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                        aliquip commodo consequat.</p>
+                    <h2>Meet Our Team</h2>
+                     
                 </div>
                 <div class="o-lecturers">
                     <div class="o-lecturers-bg" style="background: url(images/border_bg.png) no-repeat; background-size: 100% 100%;">
-                        <div class="o-lecturers-teacher active style-1 position-center-x">
-                            <a href="#itemslide0" class="o-teacher-img"><img src="images/fal_alaxander_louise_s.jpg" alt="Alaxander Louise"></a>
-                        </div>
-                        <div class="o-lecturers-teacher style-2 position-center-x">
-                            <a href="#itemslide1" class="o-teacher-img"><img src="images/fal_sarah_johnson_s.jpg" alt="Sarah Johnson"></a>
-                        </div>
-                        <div class="o-lecturers-teacher  style-3 position-center-y">
-                            <a href="#itemslide2" class="o-teacher-img"><img src="images/fal_leonardo_bonucci_s.jpg" alt="Leonardo Bonucci"></a>
+                        
+                        
+                        <div class="o-lecturers-teacher  style-2 position-center-x">
+                            <a href="#itemslide2" class="o-teacher-img"><img src="images/oluwajuwonlo.jpg" alt="Falore Oluwajuwon"></a>
                         </div>
                         <div class="o-lecturers-teacher style-4 position-center-x">
                             <a href="#itemslide3" class="o-teacher-img"><img src="images/fal_rebeca_addam_s.jpg" alt="Rebeca Addam"></a>
                         </div>
-                        <div class="o-lecturers-teacher style-5 position-center-x">
-                            <a href="#itemslide4" class="o-teacher-img"><img src="images/fal_barry_john_s.jpg" alt="Barry John"></a>
-                        </div>
+                         
                         <div class="o-slider-detail o-teacher-detail position-center-y">
-                            <div class="o-slide-item" data-hash="itemslide0">
-                                <div class="detail-teacher-img"><img src="images/fal_alaxander_louise.jpg" alt="Alaxander Louise"></div>
-                                <div class="teacher-detail">
-                                    <h3>Alaxander Louise<span>UI-UX Developer</span></h3>
-                                    <div class="social-icons">
-                                        <ul>
-                                            <li><a class="fa fa-facebook" href="#"></a></li>
-                                            <li><a class="fa fa-instagram" href="#"></a></li>
-                                            <li><a class="fa fa-google-plus" href="#"></a></li>
-                                            <li><a class="fa fa-twitter" href="#"></a></li>
-                                        </ul>
-                                    </div>
-                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.</p>
-                                    <a class="btn" href="teachers.html">View details</a>
-                                </div>
-                            </div>
-                            <div class="o-slide-item" data-hash="itemslide1">
-                                <div class="detail-teacher-img"><img src="images/fal_sarah_johnson.jpg" alt="Sarah Johnson"></div>
-                                <div class="teacher-detail">
-                                    <h3>Sarah Johnson<span>Graphic teacher</span></h3>
-                                    <div class="social-icons">
-                                        <ul>
-                                            <li><a class="fa fa-facebook" href="#"></a></li>
-                                            <li><a class="fa fa-instagram" href="#"></a></li>
-                                            <li><a class="fa fa-google-plus" href="#"></a></li>
-                                            <li><a class="fa fa-twitter" href="#"></a></li>
-                                        </ul>
-                                    </div>
-                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.</p>
-                                    <a class="btn" href="teachers.html">View details</a>
-                                </div>
-                            </div>
+                             
+                             
                             <div class="o-slide-item" data-hash="itemslide2">
-                                <div class="detail-teacher-img"><img src="images/fal_leonardo_bonucci.jpg" alt="Leonardo Bonucci"></div>
+                                <div class="detail-teacher-img"><img src="images/oluwajuwon.jpg" alt="Falore Oluwajuwon"></div>
                                 <div class="teacher-detail">
-                                    <h3>Leonardo Bonucci<span>Science teacher</span></h3>
+                                    <h3>Falore Oluwajuwon<span>Co-Founder</span></h3>
                                     <div class="social-icons">
                                         <ul>
-                                            <li><a class="fa fa-facebook" href="#"></a></li>
-                                            <li><a class="fa fa-instagram" href="#"></a></li>
-                                            <li><a class="fa fa-google-plus" href="#"></a></li>
-                                            <li><a class="fa fa-twitter" href="#"></a></li>
+                                            <li><a class="fa fa-facebook" href="https://www.facebook.com/juwonborngreat"></a></li>
+                                            <li><a class="fa fa-linkedin" href="https://www.linkedin.com/in/falore-oluwajuwon-steven-a104671a1/" target="blank"></a></li>
+                                             
+                                            <li><a class="fa fa-twitter" href="https://twitter.com/FaloreSteven" target="blank"></a></li>
                                         </ul>
                                     </div>
-                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.</p>
-                                    <a class="btn" href="teachers.html">View details</a>
+                                    <p style="text-align: justify;">Falore Oluwajuwon is both frontend and backend web developer.</p>
+                                     
                                 </div>
                             </div>
                             <div class="o-slide-item" data-hash="itemslide3">
-                                <div class="detail-teacher-img"><img src="images/fal_rebeca_addam.jpg" alt="Rebeca Addam"></div>
+                                <div class="detail-teacher-img"><img src="images/oyeyemi.jpg" alt="Oyeyemi Taiwo"></div>
                                 <div class="teacher-detail">
-                                    <h3>Rebeca Addam<span>Math teacher</span></h3>
+                                    <h3>Oyeyemi Taiwo<span>Co-Founder</span></h3>
                                     <div class="social-icons">
                                         <ul>
-                                            <li><a class="fa fa-facebook" href="#"></a></li>
-                                            <li><a class="fa fa-instagram" href="#"></a></li>
-                                            <li><a class="fa fa-google-plus" href="#"></a></li>
+                                            <li><a class="fa fa-facebook" href="https://www.facebook.com/joy.fash.399" target="blank"></a></li>
+                                            <li><a class="fa fa-linkedin" href="https://www.linkedin.com/in/joy-taiwo-97341402/" target="blank"></a></li>
+                                             
                                             <li><a class="fa fa-twitter" href="#"></a></li>
                                         </ul>
                                     </div>
-                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.</p>
-                                    <a class="btn" href="teachers.html">View details</a>
+                                    <p>Oyeyemi Taiwo is currently the CEO of Jonuel Educational Consultant. She is a certified teacher by TRCN.</p>
+                                     
                                 </div>
                             </div>
                             <div class="o-slide-item" data-hash="itemslide4">
-                                <div class="detail-teacher-img"><img src="images/fal_barry_john.jpg" alt="Barry John"></div>
-                                <div class="teacher-detail">
-                                    <h3>Barry John<span>History teacher</span></h3>
-                                    <div class="social-icons">
-                                        <ul>
-                                            <li><a class="fa fa-facebook" href="#"></a></li>
-                                            <li><a class="fa fa-instagram" href="#"></a></li>
-                                            <li><a class="fa fa-google-plus" href="#"></a></li>
-                                            <li><a class="fa fa-twitter" href="#"></a></li>
-                                        </ul>
-                                    </div>
-                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.</p>
-                                    <a class="btn" href="teachers.html">View details</a>
-                                </div>
+                                 
+                                
                             </div>
                         </div>
                     </div>
@@ -706,34 +630,7 @@
                         </ul>
                     </div>
                     <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                        <ul class="footer_list">
-                            <li>
-                                <h3>Latest News</h3>
-                                <ul class="foot_letnews_list">
-                                    <li>
-                                        <div class="foot_letnews_img"><img alt="" src="images/foot_latest_news1.jpg"></div>
-                                        <div class="foot_letnews_info">
-                                            <h4><a href="#">You'll hear a tale a tale of alorem epsumn dollare gupt animap</a></h4>
-                                            <em>Jan 23, 2016</em>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="foot_letnews_img"><img alt="" src="images/foot_latest_news2.jpg"></div>
-                                        <div class="foot_letnews_info">
-                                            <h4><a href="#">Here's the story of a named alorem epsumn dollare guptni</a></h4>
-                                            <em>Feb 17, 2016</em>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="foot_letnews_img"><img alt="" src="images/foot_latest_news3.jpg"></div>
-                                        <div class="foot_letnews_info">
-                                            <h4><a href="#">So get a witch's shawl on alorem epsumn dollare gupt</a></h4>
-                                            <em>Mar 25, 2016</em>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
+                         
                     </div>
                     <div class="col-lg-2 col-md-2 col-sm-6 col-xs-12">
                         <ul class="footer_list">
@@ -741,28 +638,27 @@
                                 <h3>Links</h3>
                                 <ul class="footer_sublist">
                                     <li><a href="#" title="About">About</a></li>
-                                    <li><a href="#" title="Courses">Courses</a></li>
-                                    <li><a href="#" title="Blog">Blog</a></li>
-                                    <li><a href="#" title="Gallery">Gallery</a></li>
-                                    <li><a href="#" title="FAQ">FAQ</a></li>
-                                    <li><a href="#" title="Contact">Contact</a></li>
-                                    <li><a href="#" title="Become a Teacher">Become a Teacher</a></li>
+                                    <li><a href="course_list" title="Courses">Courses</a></li>
+                                    <li><a href="gettutorinfo.html" title="Get Tutor">Get Tutor</a></li>
+                                     
+                                    <li><a href="becometutorpage.html" title="Become a Tutor">Become a Tutor</a></li>
+                                     
                                 </ul>
                             </li>
                         </ul>
                     </div>
                     <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 padd_rnone">
                         <div class="foot_gallery">
-                            <h3>Event Gallery</h3>
-                            <div class="col-md-4 col-xs-3"><a href="blog_right_sidebar.html"><img alt="" src="images/foot_science.jpg"></a></div>
-                            <div class="col-md-4 col-xs-3"><a href="blog_right_sidebar.html"><img alt="" src="images/foot_inclass.jpg"></a></div>
+                            <h3>Our Partners</h3>
+                            <div class="col-md-4 col-xs-3"> <img alt="" src="images/foot_science.jpg"> </div>
+                            <div class="col-md-4 col-xs-3"> <img alt="" src="images/foot_inclass.jpg"> </div>
                             <div class="col-md-4 col-xs-3"><a href="blog_right_sidebar.html"><img alt="" src="images/foot_classroom.jpg"></a></div>
                             <div class="col-md-4 col-xs-3"><a href="blog_right_sidebar.html"><img alt="" src="images/foot_with_instructor.jpg"></a></div>
                             <div class="col-md-4 col-xs-3"><a href="blog_right_sidebar.html"><img alt="" src="images/foot_campus.jpg"></a></div>
-                            <div class="col-md-4 col-xs-3"><a href="blog_right_sidebar.html"><img alt="" src="images/foot_group_in_campus.jpg"></a></div>
-                            <div class="col-md-4 col-xs-3"><a href="blog_right_sidebar.html"><img alt="" src="images/foot_sport.jpg"></a></div>
-                            <div class="col-md-4 col-xs-3"><a href="blog_right_sidebar.html"><img alt="" src="images/foot_inclass1.jpg"></a></div>
-                            <div class="col-md-4 col-xs-3"><a href="blog_right_sidebar.html"><img alt="" src="images/foot_graduate.jpg"></a></div>
+                             
+                             
+                            <div class="col-md-4 col-xs-3"> <img alt="" src="images/foot_inclass1.jpg"></a></div>
+                             
                         </div>
                     </div>
                 </div>
@@ -784,6 +680,13 @@
             </div>
         </div>
     </footer>
+    <script type='text/javascript'>
+    (function() {
+    var s = document.createElement('script');s.type='text/javascript';s.async=true;s.id='lsInitScript';
+    s.src='https://livesupporti.com/Scripts/clientAsync.js?acc=74ffcaba-8159-42ac-a8b3-aa43c76eebab&skin=Air';
+    var scr=document.getElementsByTagName('script')[0];scr.parentNode.appendChild(s, scr);
+    })();
+</script>
     <div class="offcanvas_overlay"></div>
     <script type="text/javascript" src="js/jquery-3.1.0.min.js"></script>
     <script type="text/javascript" src="js/modernizr.custom.js"></script>

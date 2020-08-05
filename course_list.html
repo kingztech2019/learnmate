@@ -57,11 +57,11 @@
 <li><a class="trigger" href="course_list.html">Courses</i></a>
  
 </li>
- <li><a class="trigger" href="#">Become A Tutor</a></li>
-  <li><a class="trigger" href="#"> Get A Tutor</a></li>
+ <li><a class="trigger" href="becometutorpage.html">Become A Tutor</a></li>
+  <li><a class="trigger" href="gettutorinfo.html"> Get A Tutor</a></li>
   <li><a class="trigger" href="aboutus.html">The Company</a>
    </li>
-  <li><a class="trigger" href="teachers.html">Tutors</a></li>
+   
 </ul>
 </div>
 
@@ -73,11 +73,11 @@
 <li><a class="trigger" href="#">Courses</a>
  
 </li>
- <li><a class="trigger" href="#">Become A Tutor</a></li>
- <li><a class="trigger" href="#"> Get A Tutor</a></li>
+ <li><a class="trigger" href="becometutorpage.html">Become A Tutor</a></li>
+ <li><a class="trigger" href="gettutorinfo.html"> Get A Tutor</a></li>
  <li><a class="trigger" href="aboutus.html">The Company</a>
     </li>
-  <li><a class="trigger" href="teachers.html">Tutors</a></li>
+   
 </ul>
 </div>
 </div>
@@ -118,24 +118,16 @@
 </div>
 <div class="search_pannel">
 <form method="post" action="#">
-<select class="selectpicker">
+<select class="selectpicker" onchange="categoryOne();" id="category">
 <option>All Categories</option>
-<option><a href="#">Computer &amp; Software</a></option>
-<option>Account</option>
-<option>Business</option>
-<option>Psychology</option>
-<option>Food</option>
-<option>Art</option>
+<option value="computer"> Computer &amp; Software </option>
+<option value="mathematics">Mathematics</option>
+<option value="language">Languages</option>
+<option value="beauty">Beauty &amp; Lifestyle</option>
+<option value="exams">Exams</option>
+<option value="business">Business &amp; Commercial</option>
 </select>
-<select class="selectpicker">
-<option>Price</option>
-<option>$70</option>
-<option>$77</option>
-<option>$90</option>
-<option>$95</option>
-<option>$100</option>
-<option>$110</option>
-</select>
+ 
 </form>
 </div>
 </div>
@@ -976,6 +968,216 @@ Fees: <span>&#8358;1,000/1hr</span>
 </div>
 </div>
 
+<!-- -------------------- Exams------------- -->
+<div class="post col-lg-12 col-md-12 col-sm-12 col-xs-12" id="page8">
+<h4 class="text-center text-info" style="font-size: 20px; font-weight:bolder;">Search results for subjects in "Exams" category</h4>
+
+<div class="course_block">
+<div class="img_wrap">
+<img alt="IELTS" src="images/ielts.jpg">
+<div class="course_img_hoverlay_btn"><a href="gettutorpage.html" title="Get Tutor" class="fa fa-eye"></a></div>
+<h4>IELTS</h4>
+</div>
+<div class="info_wrap">
+<div class="business">
+<div class="course_info">
+<p style="text-align: justify;">Get quality help from experienced tutors who have excelled in IELTS</p>
+</div>
+</div>
+ </div>
+</div>
+</div>
+
+<div class="post col-lg-12 col-md-12 col-sm-12 col-xs-12" id="page8">
+<div class="course_block">
+<div class="img_wrap">
+<img alt="SAT Math" src="images/satmath.jpg">
+<div class="course_img_hoverlay_btn"><a href="gettutorpage.html" title="Get Tutor" class="fa fa-eye"></a></div>
+<h4>SAT Math</h4>
+</div>
+<div class="info_wrap">
+<div class="business">
+<div class="course_info">
+<p style="text-align: justify;">Get quality help from experienced tutors who have excelled in SAT Math</p>
+</div>
+</div>
+ </div>
+</div>
+</div>
+
+<div class="post col-lg-12 col-md-12 col-sm-12 col-xs-12" id="page8">
+<div class="course_block">
+<div class="img_wrap">
+<img alt="GRE" src="images/gre.jpg">
+<div class="course_img_hoverlay_btn"><a href="gettutorpage.html" title="Get Tutor" class="fa fa-eye"></a></div>
+<h4>GRE</h4>
+</div>
+<div class="info_wrap">
+<div class="business">
+<div class="course_info">
+<p style="text-align: justify;">Understand GRE with help from a guru. Pass the exam in one sitting, and move on to your next level.</p>
+</div>
+</div>
+ </div>
+</div>
+</div>
+
+<div class="post col-lg-12 col-md-12 col-sm-12 col-xs-12" id="page8">
+<div class="course_block">
+<div class="img_wrap">
+<img alt="TOEFL" src="images/toefl.jpg">
+<div class="course_img_hoverlay_btn"><a href="gettutorpage.html" title="Get Tutor" class="fa fa-eye"></a></div>
+<h4>TOEFL</h4>
+</div>
+<div class="info_wrap">
+<div class="business">
+<div class="course_info">
+<p style="text-align: justify;">Need help with TOEFL? Get quality help from an experienced TOEFL tutor in your area.</p>
+</div>
+</div>
+ </div>
+</div>
+</div>
+
+<div class="post col-lg-12 col-md-12 col-sm-12 col-xs-12" id="page8">
+<div class="course_block">
+<div class="img_wrap">
+<img alt="GMAT" src="images/gmat.jpg">
+<div class="course_img_hoverlay_btn"><a href="gettutorpage.html" title="Get Tutor" class="fa fa-eye"></a></div>
+<h4>GMAT</h4>
+</div>
+<div class="info_wrap">
+<div class="business">
+<div class="course_info">
+<p style="text-align: justify;">Need help with GMAT? Get quality help from an experienced GMAT tutor in your area.</p>
+</div>
+</div>
+ </div>
+</div>
+</div>
+
+<div class="post col-lg-12 col-md-12 col-sm-12 col-xs-12" id="page8">
+<div class="course_block">
+<div class="img_wrap">
+<img alt="ICAN" src="images/ican.jpg">
+<div class="course_img_hoverlay_btn"><a href="gettutorpage.html" title="Get Tutor" class="fa fa-eye"></a></div>
+<h4>ICAN</h4>
+</div>
+<div class="info_wrap">
+<div class="business">
+<div class="course_info">
+<p style="text-align: justify;">Need help with ICAN? Get quality help from an experienced ICAN tutor in your area.</p>
+</div>
+</div>
+ </div>
+</div>
+</div>
+
+<div class="post col-lg-12 col-md-12 col-sm-12 col-xs-12" id="page8">
+<div class="course_block">
+<div class="img_wrap">
+<img alt="SAT Writing" src="images/satwritingone.jpg">
+<div class="course_img_hoverlay_btn"><a href="gettutorpage.html" title="Get Tutor" class="fa fa-eye"></a></div>
+<h4>SAT Writing</h4>
+</div>
+<div class="info_wrap">
+<div class="business">
+<div class="course_info">
+<p style="text-align: justify;">Need help with SAT Writing? Get quality help from an experienced ICAN tutor in your area.</p>
+</div>
+</div>
+ </div>
+</div>
+</div>
+
+<!-- -------------------- Business------------- -->
+<div class="post col-lg-12 col-md-12 col-sm-12 col-xs-12" id="page9">
+<h4 class="text-center text-info" style="font-size: 20px; font-weight:bolder;">Search results for subjects in "Business" category</h4>
+<div class="course_block">
+<div class="img_wrap">
+<img alt="Digital Marketing" src="images/marketing.jpg">
+<div class="course_img_hoverlay_btn"><a href="gettutorpage.html" title="Get Tutor" class="fa fa-eye"></a></div>
+<h4>Digital Marketing</h4>
+</div>
+<div class="info_wrap">
+<div class="business">
+<div class="course_info">
+<p style="text-align: justify;">Hire a qualified tutor for Digital Marketing to help you improve understanding and achieve your goals.</p>
+</div>
+</div>
+ </div>
+</div>
+</div>
+
+<div class="post col-lg-12 col-md-12 col-sm-12 col-xs-12" id="page9">
+<div class="course_block">
+<div class="img_wrap">
+<img alt="Importation" src="images/importation.jpg">
+<div class="course_img_hoverlay_btn"><a href="gettutorpage.html" title="Get Tutor" class="fa fa-eye"></a></div>
+<h4>Importation Business</h4>
+</div>
+<div class="info_wrap">
+<div class="business">
+<div class="course_info">
+<p style="text-align: justify;">Hire a qualified tutor for Importation Business to help you improve understanding and achieve your goals.</p>
+</div>
+</div>
+ </div>
+</div>
+</div>
+
+<div class="post col-lg-12 col-md-12 col-sm-12 col-xs-12" id="page9">
+<div class="course_block">
+<div class="img_wrap">
+<img alt="Exportation Business" src="images/exportation.jpg">
+<div class="course_img_hoverlay_btn"><a href="gettutorpage.html" title="Get Tutor" class="fa fa-eye"></a></div>
+<h4>Exportation Business</h4>
+</div>
+<div class="info_wrap">
+<div class="business">
+<div class="course_info">
+<p style="text-align: justify;">Hire a qualified tutor for Exportation Business to help you improve understanding and achieve your goals.</p>
+</div>
+</div>
+ </div>
+</div>
+</div>
+
+<div class="post col-lg-12 col-md-12 col-sm-12 col-xs-12" id="page9">
+<div class="course_block">
+<div class="img_wrap">
+<img alt="Writing Business Plan" src="images/plan.jpg">
+<div class="course_img_hoverlay_btn"><a href="gettutorpage.html" title="Get Tutor" class="fa fa-eye"></a></div>
+<h4>Writing Business Plan</h4>
+</div>
+<div class="info_wrap">
+<div class="business">
+<div class="course_info">
+<p style="text-align: justify;">Hire a qualified tutor for Writing Business Plan to help you improve understanding and achieve your goals.</p>
+</div>
+</div>
+ </div>
+</div>
+</div>
+
+<div class="post col-lg-12 col-md-12 col-sm-12 col-xs-12" id="page9">
+<div class="course_block">
+<div class="img_wrap">
+<img alt="Public Speaking" src="images/public.jpg">
+<div class="course_img_hoverlay_btn"><a href="gettutorpage.html" title="Get Tutor" class="fa fa-eye"></a></div>
+<h4>Public Speaking</h4>
+</div>
+<div class="info_wrap">
+<div class="business">
+<div class="course_info">
+<p style="text-align: justify;">Hire a qualified tutor for Public Speaking Plan to help you improve understanding and achieve your goals.</p>
+</div>
+</div>
+ </div>
+</div>
+</div>
+
+
 </div>
  
 
@@ -1002,13 +1204,7 @@ Fees: <span>&#8358;1,000/1hr</span>
 
 
 <div class="aside_wrapper col-lg-3 col-md-4 col-sm-12 col-xs-12">
-
-<div class="search_course">
-<form method="post" action="#">
-<input class="form-control" placeholder="What are you looking for?" name="s" type="text">
-<button type="submit" class="btn btn_search"><i class="fa fa-search"></i></button>
-</form>
-</div>
+ 
 
 
 <div class="category_course">
@@ -1018,8 +1214,8 @@ Fees: <span>&#8358;1,000/1hr</span>
 <li><a href="#" onclick="showPage(5); return false;">Mathematics</a></li>
 <li><a href="#" onclick="showPage(6); return false;">Languages</a></li>
 <li><a href="#" onclick="showPage(7); return false;">Beauty &amp; Lifestyle</a></li>
-<li><a href="#">.Net 4.0 Framework</a></li>
-<li><a href="#">Advance Java Script</a></li>
+<li><a href="#" onclick="showPage(8); return false;">Exams</a></li>
+<li><a href="#" onclick="showPage(9); return false;">Business & Commercial</a></li>
 </ul>
 </div>
 
@@ -1034,26 +1230,7 @@ Fees: <span>&#8358;1,000/1hr</span>
 <button type="submit" class="btn btn_subscribe">Subscribe <i class="fa fa-paper-plane"></i></button>
 </form>
 </div>
-
-
-<div class="course_tags">
-<h4>Tags</h4>
-<ul>
-<li>
-<a href="#">Adobe</a>
-<a href="#">Courses</a>
-<a href="#">Development</a>
-<a href="#">HTML5</a>
-<a href="#">Music</a>
-<a href="#">Photoshop</a>
-<a href="#">Croaldraw</a>
-<a href="#">CSS3</a>
-<a href="#">Library</a>
-<a href="#">Wordpress</a>
-<a href="#">Joomla</a>
-</li>
-</ul>
-</div>
+ 
 
 </div>
 
@@ -1110,80 +1287,7 @@ Fees: <span>&#8358;1,000/1hr</span>
 </div>
 
 
-<div id="blog" class="blog">
-<div class="container">
-<div class="head_part">
-<h2>Latest News from LearnMate</h2>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore. Lorem ipsum
-dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>
-</div>
-<div class="dtl_wrapper">
-<div class="col-md-4 col-sm-6 col-xs-12">
-<div class="dtl_block">
-<div class="dtl_img">
-<img alt="Blog Image" src="images/latest_news1.jpg">
-</div>
-<div class="blog_auther_info">
-<div class="blog_auther">
-<span>By <a href="#">Admin</a> / <a href="#">Llibrary</a></span>
-</div>
-<div class="blog_date">
-Jan <br> 23
-</div>
-</div>
-<div class="blog_info">
-<h3><a href="#">This Is Your Chance to Close the Reading Achievement Gap</a></h3>
-<p>Lorem ipsum dolor sit amet, consectetur adipicing elit, sed do eiusmod tempor incididunt ut labore sit amet, consectetur adipisicing elit, eiusmod tempor incididunt ut sed se labore.
-Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-<a href="blog_right_sidebar.html" class="btn_glob">Read More</a>
-</div>
-</div>
-</div>
-<div class="col-md-4 col-sm-6 col-xs-12">
-<div class="dtl_block">
-<div class="dtl_img">
-<img alt="Blog Image" src="images/latest_news2.jpg">
-</div>
-<div class="blog_auther_info">
-<div class="blog_auther">
-<span>By <a href="#">Admin</a> / <a href="#">Campus</a></span>
-</div>
-<div class="blog_date">
-Feb <br> 17
-</div>
-</div>
-<div class="blog_info">
-<h3><a href="#">Do Division I Athletes Get the Academics They Deserve?</a></h3>
-<p>Lorem ipsum dolor sit amet, consectetur adipicing elit, sed do eiusmod tempor incididunt ut labore sit amet, consectetur adipisicing elit, eiusmod tempor incididunt ut sed se labore.
-Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-<a href="blog_right_sidebar.html" class="btn_glob">Read More</a>
-</div>
-</div>
-</div>
-<div class="col-md-4 col-sm-6 col-xs-12">
-<div class="dtl_block">
-<div class="dtl_img">
-<img alt="Blog Image" src="images/latest_news3.jpg">
-</div>
-<div class="blog_auther_info">
-<div class="blog_auther">
-<span>By <a href="#">Admin</a> / <a href="#">Classroom</a></span>
-</div>
-<div class="blog_date">
-Mar <br> 25
-</div>
-</div>
-<div class="blog_info">
-<h3><a href="#">Defining Learning Analytics and the Insights it Can Bring</a></h3>
-<p>Lorem ipsum dolor sit amet, consectetur adipicing elit, sed do eiusmod tempor incididunt ut labore sit amet, consectetur adipisicing elit, eiusmod tempor incididunt ut sed se labore.
-Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-<a href="blog_right_sidebar.html" class="btn_glob">Read More</a>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
+ 
 
 </div>
 
@@ -1208,64 +1312,34 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
 </li>
 </ul>
 </div>
-<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-<ul class="footer_list">
-<li>
-<h3>Latest News</h3>
-<ul class="foot_letnews_list">
-<li>
-<div class="foot_letnews_img"><img alt="" src="images/foot_latest_news1.jpg"></div>
-<div class="foot_letnews_info">
-<h4><a href="#">You'll hear a tale a tale of alorem epsumn dollare gupt animap</a></h4>
-<em>Jan 23, 2016</em>
-</div>
-</li>
-<li>
-<div class="foot_letnews_img"><img alt="" src="images/foot_latest_news2.jpg"></div>
-<div class="foot_letnews_info">
-<h4><a href="#">Here's the story of a named alorem epsumn dollare guptni</a></h4>
-<em>Feb 17, 2016</em>
-</div>
-</li>
-<li>
-<div class="foot_letnews_img"><img alt="" src="images/foot_latest_news3.jpg"></div>
-<div class="foot_letnews_info">
-<h4><a href="#">So get a witch's shawl on alorem epsumn dollare gupt</a></h4>
-<em>Mar 25, 2016</em>
-</div>
-</li>
-</ul>
-</li>
-</ul>
-</div>
+ 
 <div class="col-lg-2 col-md-2 col-sm-6 col-xs-12">
 <ul class="footer_list">
 <li>
 <h3>Links</h3>
 <ul class="footer_sublist">
-<li><a href="#" title="About">About</a></li>
-<li><a href="#" title="Courses">Courses</a></li>
-<li><a href="#" title="Blog">Blog</a></li>
-<li><a href="#" title="Gallery">Gallery</a></li>
-<li><a href="#" title="FAQ">FAQ</a></li>
-<li><a href="#" title="Contact">Contact</a></li>
-<li><a href="#" title="Become a Teacher">Become a Teacher</a></li>
-</ul>
+   <li><a href="#" title="About">About</a></li>
+  <li><a href="course_list" title="Courses">Courses</a></li>
+  <li><a href="gettutorinfo.html" title="Get Tutor">Get Tutor</a></li>
+                                     
+  <li><a href="becometutorpage.html" title="Become a Tutor">Become a Tutor</a></li>
+                                     
+                                </ul>
 </li>
 </ul>
 </div>
 <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 padd_rnone">
 <div class="foot_gallery">
-<h3>Event Gallery</h3>
-<div class="col-md-4 col-xs-3"><a href="blog_right_sidebar.html"><img alt="" src="images/foot_science.jpg"></a></div>
-<div class="col-md-4 col-xs-3"><a href="blog_right_sidebar.html"><img alt="" src="images/foot_inclass.jpg"></a></div>
-<div class="col-md-4 col-xs-3"><a href="blog_right_sidebar.html"><img alt="" src="images/foot_classroom.jpg"></a></div>
-<div class="col-md-4 col-xs-3"><a href="blog_right_sidebar.html"><img alt="" src="images/foot_with_instructor.jpg"></a></div>
-<div class="col-md-4 col-xs-3"><a href="blog_right_sidebar.html"><img alt="" src="images/foot_campus.jpg"></a></div>
-<div class="col-md-4 col-xs-3"><a href="blog_right_sidebar.html"><img alt="" src="images/foot_group_in_campus.jpg"></a></div>
-<div class="col-md-4 col-xs-3"><a href="blog_right_sidebar.html"><img alt="" src="images/foot_sport.jpg"></a></div>
-<div class="col-md-4 col-xs-3"><a href="blog_right_sidebar.html"><img alt="" src="images/foot_inclass1.jpg"></a></div>
-<div class="col-md-4 col-xs-3"><a href="blog_right_sidebar.html"><img alt="" src="images/foot_graduate.jpg"></a></div>
+<h3>Our Partners</h3>
+<div class="col-md-4 col-xs-3"><img alt="" src="images/foot_science.jpg"></div>
+<div class="col-md-4 col-xs-3"><img alt="" src="images/foot_inclass.jpg"> </div>
+<div class="col-md-4 col-xs-3"><img alt="" src="images/foot_classroom.jpg"> </div>
+<div class="col-md-4 col-xs-3"> <img alt="" src="images/foot_with_instructor.jpg"> </div>
+<div class="col-md-4 col-xs-3"> <img alt="" src="images/foot_campus.jpg"> </div>
+ 
+ 
+<div class="col-md-4 col-xs-3"><img alt="" src="images/foot_inclass1.jpg"> </div>
+ 
 </div>
 </div>
 </div>

@@ -27,7 +27,30 @@ function nextPage() {
     showPage(page);
 }
 
+function categoryOne(){
+	if (document.querySelector("#category").value=="computer") {
+		 
+		 showPage(4);
+	}else if(document.querySelector("#category").value=="mathematics"){
+		showPage(5);
+
+	}else if(document.querySelector("#category").value=="language"){
+		showPage(6);
+
+	}else if(document.querySelector("#category").value=="beauty"){
+		showPage(7);
+
+	}else if(document.querySelector("#category").value=="exams"){
+		showPage(8);
+
+	}else if(document.querySelector("#category").value=="business"){
+		showPage(9);
+
+	}
+}
+
 $(document).ready(function() {
+		 
     showPage(1);
          	
     $('#prev').click(prevPage);
